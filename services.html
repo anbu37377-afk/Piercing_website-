@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Pricing | Ethereal Ink Piercing</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: '#7c3aed', secondary: '#ec4899', accent: '#06b6d4', dark: '#0f0f0f' }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-mode">
+
+    <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-needle text-primary text-2xl rotate-45"></i>
+                <span class="text-2xl font-display font-extrabold tracking-tighter text-white">ETHEREAL<span
+                        class="text-primary">INK</span></span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-sm font-semibold hover:text-primary transition-colors">Home</a>
+                <a href="index-v2.html" class="text-sm font-semibold hover:text-primary transition-colors">Home 2</a>
+                <a href="services.html" class="text-sm font-semibold text-primary">Services</a>
+                <a href="jewelry-catalog.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Jewelry</a>
+                <a href="artists.html" class="text-sm font-semibold hover:text-primary transition-colors">Artists</a>
+                <a href="aftercare-guide.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Aftercare</a>
+                <a href="gallery.html" class="text-sm font-semibold hover:text-primary transition-colors">Gallery</a>
+                <a href="dashboard.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Dashboard</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle RTL/LTR">
+                    <i class="fas fa-align-right"></i>
+                </button>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle Theme">
+                    <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
+                    <i id="theme-icon-light" class="fas fa-sun"></i>
+                </button>
+                <a href="booking.html" class="btn-primary">Book Now</a>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-dark border-b border-white/10 flex-col p-6 space-y-4 animate-fadeIn">
+            <a href="index.html" class="text-lg font-semibold">Home</a>
+            <a href="index-v2.html" class="text-lg font-semibold">Home 2</a>
+            <a href="services.html" class="text-lg font-semibold">Services</a>
+            <a href="jewelry-catalog.html" class="text-lg font-semibold">Jewelry</a>
+            <a href="artists.html" class="text-lg font-semibold">Artists</a>
+            <a href="aftercare-guide.html" class="text-lg font-semibold">Aftercare</a>
+            <a href="gallery.html" class="text-lg font-semibold">Gallery</a>
+            <a href="dashboard.html" class="text-lg font-semibold">Dashboard</a>
+            <a href="booking.html" class="btn-primary inline-block text-center">Book Appointment</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto mb-16 text-center">
+                <h1 class="text-5xl md:text-6xl font-display font-extrabold mb-6 uppercase tracking-tighter">TECHNICAL
+                    <br><span class="text-primary neon-text-purple">SPECIFICATIONS</span>
+                </h1>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    At Ethereal Ink, we treat every procedure as a minor surgical event. Below you will find a detailed
+                    breakdown of our services, including pain metrics, healing timelines, and our strict material
+                    requirements.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Left Sidebar: Categories Navigation -->
+                <div class="lg:col-span-1">
+                    <div class="sticky top-40 space-y-8">
+                        <div class="bg-white/5 rounded-3xl p-8 border border-white/10">
+                            <h3 class="text-xl font-bold mb-6 uppercase tracking-widest">Procedural Menu</h3>
+                            <nav class="space-y-4">
+                                <a href="#ear"
+                                    class="flex items-center justify-between p-4 rounded-xl hover:bg-white/10 transition-all group">
+                                    <span class="font-bold group-hover:text-primary">Ear Anatomy</span>
+                                    <i
+                                        class="fas fa-chevron-right text-xs opacity-50 group-hover:translate-x-1 transition-all"></i>
+                                </a>
+                                <a href="#facial"
+                                    class="flex items-center justify-between p-4 rounded-xl hover:bg-white/10 transition-all group">
+                                    <span class="font-bold group-hover:text-primary">Facial Features</span>
+                                    <i
+                                        class="fas fa-chevron-right text-xs opacity-50 group-hover:translate-x-1 transition-all"></i>
+                                </a>
+                                <a href="#specialized"
+                                    class="flex items-center justify-between p-4 rounded-xl hover:bg-white/10 transition-all group">
+                                    <span class="font-bold group-hover:text-primary">Specialized Craft</span>
+                                    <i
+                                        class="fas fa-chevron-right text-xs opacity-50 group-hover:translate-x-1 transition-all"></i>
+                                </a>
+                                <a href="#materials"
+                                    class="flex items-center justify-between p-4 rounded-xl hover:bg-white/10 transition-all group">
+                                    <span class="font-bold group-hover:text-primary">Material Science</span>
+                                    <i
+                                        class="fas fa-chevron-right text-xs opacity-50 group-hover:translate-x-1 transition-all"></i>
+                                </a>
+                            </nav>
+                        </div>
+
+                        <div class="p-8 bg-primary/10 rounded-3xl border border-primary/20">
+                            <h4 class="text-sm font-black uppercase tracking-widest mb-4 flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i> Safety Protocol
+                            </h4>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Our studio utilizes Statim G4 vacuum autoclaves. Every tool and piece of jewelry is
+                                sterilized immediately before your procedure. We maintain a log of every cycle for your
+                                peace of mind.
+                            </p>
+                            <a href="faq.html"
+                                class="text-xs font-bold text-primary hover:underline uppercase tracking-widest">View
+                                sterilization logs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-2 space-y-24">
+                    <!-- Ear Piercing -->
+                    <section id="ear">
+                        <div class="flex items-center space-x-4 mb-8">
+                            <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white">
+                                <i class="fas fa-ear text-xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-display font-black uppercase">Ear Anatomy</h2>
+                        </div>
+                        <p class="text-gray-400 mb-8 leading-relaxed">
+                            Ear piercing is an ancient art that we've refined through modern science. We evaluate the
+                            unique cartilage structure and blood flow of your ear to determine the safest and most
+                            aesthetic placement.
+                        </p>
+                        <div class="space-y-4">
+                            <!-- Service Item -->
+                            <div
+                                class="p-6 bg-white/5 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                    <div>
+                                        <h4 class="text-xl font-bold">Lobe (Classic & Transverse)</h4>
+                                        <div class="flex flex-wrap items-center gap-4 mt-2">
+                                            <span
+                                                class="text-[10px] bg-green-500/10 text-green-500 px-2 py-1 rounded font-black uppercase">Pain:
+                                                2/10</span>
+                                            <span
+                                                class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded font-black uppercase">Healing:
+                                                6-10 Weeks</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 md:mt-0 text-right">
+                                        <span class="text-2xl font-black text-white">$40 / $75</span>
+                                        <p class="text-[10px] text-gray-500 uppercase mt-1">Single / Pair</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="p-6 bg-white/5 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                    <div>
+                                        <h4 class="text-xl font-bold">Standard Cartilage (Helix, Flat, Forward)</h4>
+                                        <div class="flex flex-wrap items-center gap-4 mt-2">
+                                            <span
+                                                class="text-[10px] bg-yellow-500/10 text-yellow-500 px-2 py-1 rounded font-black uppercase">Pain:
+                                                4-5/10</span>
+                                            <span
+                                                class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded font-black uppercase">Healing:
+                                                6-12 Months</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 md:mt-0 text-right">
+                                        <span class="text-2xl font-black text-white">$55+</span>
+                                        <p class="text-[10px] text-gray-500 uppercase mt-1">Starting Price</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="p-6 bg-white/5 rounded-2xl border border-white/5 hover:border-primary/30 transition-all">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                    <div>
+                                        <h4 class="text-xl font-bold">Advanced Cartilage (Daith, Rook, Industrial)</h4>
+                                        <div class="flex flex-wrap items-center gap-4 mt-2">
+                                            <span
+                                                class="text-[10px] bg-red-500/10 text-red-500 px-2 py-1 rounded font-black uppercase">Pain:
+                                                6-8/10</span>
+                                            <span
+                                                class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded font-black uppercase">Healing:
+                                                9-12 Months</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 md:mt-0 text-right">
+                                        <span class="text-2xl font-black text-white">$85+</span>
+                                        <p class="text-[10px] text-gray-500 uppercase mt-1">Starting Price</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Facial Piercing -->
+                    <section id="facial">
+                        <div class="flex items-center space-x-4 mb-8">
+                            <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center text-white">
+                                <i class="fas fa-eye text-xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-display font-black uppercase">Facial Features</h2>
+                        </div>
+                        <p class="text-gray-400 mb-8 leading-relaxed">
+                            Facial modifications require an intimate understanding of symmetry and tissue density. We
+                            provide laser-guided alignment for all midline procedures to ensure your modifications
+                            harmonize with your natural expressions.
+                        </p>
+                        <div class="space-y-4">
+                            <div
+                                class="p-6 bg-white/5 rounded-2xl border border-white/5 hover:border-accent/30 transition-all">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                    <div>
+                                        <h4 class="text-xl font-bold">Standard Nostril</h4>
+                                        <div class="flex flex-wrap items-center gap-4 mt-2">
+                                            <span
+                                                class="text-[10px] bg-green-500/10 text-green-500 px-2 py-1 rounded font-black uppercase">Pain:
+                                                3/10</span>
+                                            <span
+                                                class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded font-black uppercase">Healing:
+                                                4-6 Months</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 md:mt-0 text-right">
+                                        <span class="text-2xl font-black text-white">$50</span>
+                                        <p class="text-[10px] text-gray-500 uppercase mt-1">Starting Price</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="p-6 bg-white/5 rounded-2xl border border-white/5 hover:border-accent/30 transition-all">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                    <div>
+                                        <h4 class="text-xl font-bold">Septum Modification</h4>
+                                        <div class="flex flex-wrap items-center gap-4 mt-2">
+                                            <span
+                                                class="text-[10px] bg-green-500/10 text-green-500 px-2 py-1 rounded font-black uppercase">Pain:
+                                                3-4/10</span>
+                                            <span
+                                                class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded font-black uppercase">Healing:
+                                                3-5 Months</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 md:mt-0 text-right">
+                                        <span class="text-2xl font-black text-white">$60</span>
+                                        <p class="text-[10px] text-gray-500 uppercase mt-1">Starting Price</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="p-6 bg-white/5 rounded-2xl border border-white/5 hover:border-accent/30 transition-all">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                    <div>
+                                        <h4 class="text-xl font-bold">Oral Mods (Medusa, Labret, Monroe)</h4>
+                                        <div class="flex flex-wrap items-center gap-4 mt-2">
+                                            <span
+                                                class="text-[10px] bg-yellow-500/10 text-yellow-500 px-2 py-1 rounded font-black uppercase">Pain:
+                                                4-6/10</span>
+                                            <span
+                                                class="text-[10px] bg-white/5 text-gray-400 px-2 py-1 rounded font-black uppercase">Healing:
+                                                2-4 Months</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 md:mt-0 text-right">
+                                        <span class="text-2xl font-black text-white">$65+</span>
+                                        <p class="text-[10px] text-gray-500 uppercase mt-1">Anatomy Dependent</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Specialized Craft -->
+                    <section id="specialized">
+                        <div class="flex items-center space-x-4 mb-8">
+                            <div class="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center text-white">
+                                <i class="fas fa-gem text-xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-display font-black uppercase">Specialized Craft</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="p-8 bg-neutral-900 border border-white/5 rounded-3xl">
+                                <h4 class="font-bold text-lg mb-4 text-secondary uppercase">Custom Curation</h4>
+                                <p class="text-sm text-gray-500 leading-relaxed">
+                                    A 45-minute design session where we map your entire ear and select a thematic
+                                    jewelry set. Perfect for those looking to build a cohesive collection.
+                                </p>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <span class="font-black text-xl">$50</span>
+                                    <span class="text-[10px] text-gray-600 uppercase">Consult Fee</span>
+                                </div>
+                            </div>
+                            <div class="p-8 bg-neutral-900 border border-white/5 rounded-3xl">
+                                <h4 class="font-bold text-lg mb-4 text-secondary uppercase">Jewelry Restoration</h4>
+                                <p class="text-sm text-gray-500 leading-relaxed">
+                                    Ultrasonic cleaning and mirror-polishing for your existing high-end jewelry. We
+                                    restore the luster and remove bio-film for safe re-insertion.
+                                </p>
+                                <div class="mt-6 flex justify-between items-center">
+                                    <span class="font-black text-xl">$15+</span>
+                                    <span class="text-[10px] text-gray-600 uppercase">Per Piece</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Material Science -->
+                    <section id="materials" class="p-12 bg-white/5 rounded-[40px] border border-white/10">
+                        <h2 class="text-3xl font-display font-black mb-8 uppercase text-center">Material Science</h2>
+                        <div class="space-y-8">
+                            <div>
+                                <h4 class="text-white font-bold mb-2 flex items-center">
+                                    <i class="fas fa-microscope text-primary mr-3"></i> Titanium (ASTM-F136)
+                                </h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">
+                                    This is the gold standard for initial piercings. It is an implant-grade alloy that
+                                    is lightweight and highly biocompatible. It does not contain nickel, which is the
+                                    leading cause of metal allergies.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-2 flex items-center">
+                                    <i class="fas fa-certificate text-yellow-500 mr-3"></i> 14k/18k Solid Gold
+                                </h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">
+                                    We only use solid gold from reputable manufacturers. Our gold is alloyed
+                                    specifically for body jewelry to ensure it's free of cadmium and lead. We never use
+                                    gold-plated or gold-filled jewelry for initial procedures.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-2 flex items-center">
+                                    <i class="fas fa-flask text-accent mr-3"></i> Niobium
+                                </h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">
+                                    An elemental metal that is 99.9% pure. Great for those with extreme metal
+                                    sensitivities, Niobium can be anodized into a wide range of colors including a true
+                                    black.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- FAQ Expansion -->
+                    <section class="space-y-12">
+                        <h2 class="text-3xl font-display font-black uppercase text-center">Procedural FAQ</h2>
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="p-6 bg-black rounded-2xl border border-white/5">
+                                <h5 class="font-bold text-white mb-2">Can I bring my own jewelry to be pierced with?
+                                </h5>
+                                <p class="text-sm text-gray-500 leading-relaxed">
+                                    Due to health regulations and insurance requirements, we can only pierce with
+                                    jewelry purchased from our studio. We must be able to verify the mill certificates
+                                    for the metal and ensure it has been sterilized in our own autoclaves.
+                                </p>
+                            </div>
+                            <div class="p-6 bg-black rounded-2xl border border-white/5">
+                                <h5 class="font-bold text-white mb-2">How do I know if my piercing is infected?</h5>
+                                <p class="text-sm text-gray-500 leading-relaxed">
+                                    Some redness and swelling is normal. However, if you experience excessive heat,
+                                    yellow/green discharge with an odor, or throbbing pain, please contact us
+                                    immediately for an assessment. We provide free troubleshooting for all our clients.
+                                </p>
+                            </div>
+                            <div class="p-6 bg-black rounded-2xl border border-white/5">
+                                <h5 class="font-bold text-white mb-2">Why don't you use piercing guns?</h5>
+                                <p class="text-sm text-gray-500 leading-relaxed">
+                                    Piercing guns utilize blunt force trauma to push a dull stud through the skin, which
+                                    can damage the tissue. More importantly, piercing guns are made of plastic and
+                                    cannot be sterilized in an autoclave, posing a significant cross-contamination risk.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CTA -->
+                    <div class="p-12 bg-gradient-to-br from-primary to-secondary rounded-[40px] text-center text-white">
+                        <h3 class="text-3xl font-display font-black mb-6 uppercase">Ready to Start?</h3>
+                        <p class="mb-8 font-medium">Book your consultation or procedure today and experience the
+                            valley's highest standard of care.</p>
+                        <a href="booking.html"
+                            class="inline-block bg-white text-dark px-12 py-5 rounded-full font-black uppercase tracking-widest hover:bg-dark hover:text-white transition-all">Book
+                            Online Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Shared Footer Logic in Production -->
+    <footer class="bg-black border-t border-white/10 py-12 text-center text-gray-500 text-sm">
+        <p>&copy; 2026 Ethereal Ink Piercing</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

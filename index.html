@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereal Ink & Piercing | Professional Body Art Studio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Ethereal Ink & Piercing - Premium piercing studio offering safe, professional body art and high-quality titanium and gold jewelry. Book your artist today.">
+    <meta name="keywords"
+        content="ear piercing, nose piercing, titanium jewelry, aftercare, APP certified, piercing studio">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7c3aed',
+                        secondary: '#ec4899',
+                        accent: '#06b6d4',
+                        dark: '#0f0f0f',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                        accent: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&family=Outfit:wght@600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-mode">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-needle text-primary text-2xl rotate-45"></i>
+                <span class="text-2xl font-display font-extrabold tracking-tighter text-white">
+                    ETHEREAL<span class="text-primary">INK</span>
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-sm font-semibold hover:text-primary transition-colors">Home</a>
+                <a href="index-v2.html" class="text-sm font-semibold hover:text-primary transition-colors">Home 2</a>
+                <a href="services.html" class="text-sm font-semibold hover:text-primary transition-colors">Services</a>
+                <a href="jewelry-catalog.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Jewelry</a>
+                <a href="artists.html" class="text-sm font-semibold hover:text-primary transition-colors">Artists</a>
+                <a href="aftercare-guide.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Aftercare</a>
+                <a href="gallery.html" class="text-sm font-semibold hover:text-primary transition-colors">Gallery</a>
+                <a href="dashboard.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Dashboard</a>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="flex items-center space-x-4">
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle RTL/LTR">
+                    <i class="fas fa-align-right"></i>
+                </button>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle Theme">
+                    <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
+                    <i id="theme-icon-light" class="fas fa-sun"></i>
+                </button>
+                <a href="booking.html" class="btn-primary hidden md:inline-block">Book Now</a>
+                <a href="login.html" class="text-sm font-semibold hover:text-primary transition-colors"><i
+                        class="fas fa-user-circle text-xl align-middle mr-1"></i>Portal</a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-dark border-b border-white/10 flex-col p-6 space-y-4 animate-fadeIn">
+            <a href="index.html" class="text-lg font-semibold">Home</a>
+            <a href="index-v2.html" class="text-lg font-semibold">Home 2</a>
+            <a href="services.html" class="text-lg font-semibold">Services</a>
+            <a href="jewelry-catalog.html" class="text-lg font-semibold">Jewelry</a>
+            <a href="artists.html" class="text-lg font-semibold">Artists</a>
+            <a href="aftercare-guide.html" class="text-lg font-semibold">Aftercare</a>
+            <a href="gallery.html" class="text-lg font-semibold">Gallery</a>
+            <a href="dashboard.html" class="text-lg font-semibold">Dashboard</a>
+            <a href="booking.html" class="btn-primary inline-block text-center">Book Appointment</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home v1 Hero Section -->
+        <section class="relative h-screen flex items-center pt-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920" alt="Studio Interior"
+                    class="w-full h-full object-cover brightness-50 scale-105 transition-transform duration-10000 hover:scale-100">
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10 text-center md:text-left">
+                <h1 class="text-6xl md:text-8xl font-display font-extrabold mb-6 leading-none"
+                    title="Defining Modern Adornment">
+                    EXPRESSION <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">WITHOUT
+                        LIMITS</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+                    Welcome to Ethereal Ink—the valley's premier destination for high-end body modification. We combine
+                    ancient traditions with modern surgical precision to provide a curated, sterile, and artistic
+                    experience.
+                </p>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                    <a href="booking.html"
+                        class="px-10 py-4 bg-primary rounded-full text-white font-bold text-lg hover:bg-purple-700 transition-all text-center transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/25">
+                        Start Your Journey
+                    </a>
+                    <a href="jewelry-catalog.html"
+                        class="px-10 py-4 border border-white/30 rounded-full text-white font-bold text-lg hover:bg-white/10 transition-all text-center transform hover:scale-105 active:scale-95">
+                        Explore Catalog
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </div>
+        </section>
+
+        <!-- Quick Info / Certification -->
+        <section class="py-12 bg-black border-y border-white/5">
+            <div
+                class="container mx-auto px-6 flex flex-wrap justify-center items-center gap-12 opacity-70 grayscale hover:grayscale-0 transition-all">
+                <div class="flex items-center space-x-3 group cursor-help" title="Association of Professional Piercers">
+                    <i class="fas fa-shield-virus text-3xl text-primary transition-transform group-hover:scale-110"></i>
+                    <span class="font-bold tracking-widest text-xs uppercase">APP Member Studio</span>
+                </div>
+                <div class="flex items-center space-x-3 group cursor-help" title="Statim G4 Autoclave Sterilization">
+                    <i class="fas fa-hands-bubbles text-3xl text-accent transition-transform group-hover:scale-110"></i>
+                    <span class="font-bold tracking-widest text-xs uppercase">Hospital Grade Sterilization</span>
+                </div>
+                <div class="flex items-center space-x-3 group cursor-help" title="ASTM-F136 Certified Materials">
+                    <i class="fas fa-gem text-3xl text-secondary transition-transform group-hover:scale-110"></i>
+                    <span class="font-bold tracking-widest text-xs uppercase">Implant Grade Titanium</span>
+                </div>
+                <div class="flex items-center space-x-3 group cursor-help" title="Voted #1 Studio in Vibrant City">
+                    <i
+                        class="fas fa-certificate text-3xl text-yellow-500 transition-transform group-hover:scale-110"></i>
+                    <span class="font-bold tracking-widest text-xs uppercase">Licensed Professionals</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Story Section -->
+        <section class="py-24 bg-dark relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <h2 class="text-4xl md:text-5xl font-display font-extrabold mb-8 leading-tight">
+                            A LEGACY OF <br>
+                            <span class="text-primary italic">PRECISION & ARTISTRY</span>
+                        </h2>
+                        <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
+                            <p>
+                                Founded in 2018, Ethereal Ink was born from a singular vision: to elevate the body
+                                piercing experience beyond the backrooms of traditional tattoo shops. We believed that
+                                body modification deserved a dedicated space that prioritized medical-grade hygiene as
+                                much as artistic vision.
+                            </p>
+                            <p>
+                                Our journey began in a small one-room studio with a commitment to never using piercing
+                                guns and only stocking the world's finest jewelry. Over the years, we have grown into a
+                                multi-disciplinary collective of artists, each specializing in unique aspects of body
+                                adornment, from complex ear curations to subtle facial aesthetics.
+                            </p>
+                            <p>
+                                At Ethereal Ink, we don't just perform a service; we facilitate a transformation. Every
+                                client who walks through our doors is treated with the utmost respect and care. We
+                                understand that for many, a new piercing is a milestone, a form of reclamation, or a
+                                celebration of self-identity. It is our honor to be a part of those stories.
+                            </p>
+                        </div>
+                        <div class="mt-10 flex items-center space-x-6">
+                            <div class="text-center border-r border-white/10 pr-6">
+                                <span class="block text-3xl font-black text-white">15k+</span>
+                                <span class="text-xs uppercase tracking-widest text-gray-500">Piercings Completed</span>
+                            </div>
+                            <div class="text-center border-r border-white/10 pr-6">
+                                <span class="block text-3xl font-black text-white">100%</span>
+                                <span class="text-xs uppercase tracking-widest text-gray-500">Sterile Guarantee</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="block text-3xl font-black text-white">5 Star</span>
+                                <span class="text-xs uppercase tracking-widest text-gray-500">Client Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=600"
+                                alt="Gold Jewelry Detail" class="rounded-2xl transform translate-y-8 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1512690136236-99a756f30d5d?w=600"
+                                alt="Artist Preparing" class="rounded-2xl shadow-2xl">
+                        </div>
+                        <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-primary/20 blur-[80px] -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us / Technical Excellence -->
+        <section class="py-24 bg-neutral-900/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl font-display font-extrabold mb-4 uppercase tracking-tighter">THE ETHEREAL
+                        STANDARD</h2>
+                    <p class="text-gray-500 max-w-2xl mx-auto">We set the bar for safety and quality in the body art
+                        industry. Here is why clients trust us with their most personal adornments.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Tech Item 1 -->
+                    <div
+                        class="p-8 bg-black/40 rounded-3xl border border-white/5 hover:border-primary/50 transition-all group">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i class="fas fa-microscope text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Aseptic Piercing</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            Every procedure is performed using a strict non-touch technique. All skin preparation uses
+                            medical-grade antiseptic solutions to ensure your safety and minimize infection risks.
+                        </p>
+                    </div>
+
+                    <!-- Tech Item 2 -->
+                    <div
+                        class="p-8 bg-black/40 rounded-3xl border border-white/5 hover:border-secondary/50 transition-all group">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <i class="fas fa-vial text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Biocompatible Metals</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            We only use ASTM-F136 compliant Titanium and nickel-free 14k/18k Solid Gold. Our jewelry is
+                            hand-polished to a mirror finish to eliminate microscopic burrs that can cause irritation.
+                        </p>
+                    </div>
+
+                    <!-- Tech Item 3 -->
+                    <div
+                        class="p-8 bg-black/40 rounded-3xl border border-white/5 hover:border-accent/50 transition-all group">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
+                            <i class="fas fa-heartbeat text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Aftercare Education</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            Our relationship doesn't end when the needle is withdrawn. We provide detailed,
+                            science-based aftercare instructions and lifetime troubleshooting support for all our
+                            clients.
+                        </p>
+                    </div>
+
+                    <!-- Tech Item 4 -->
+                    <div
+                        class="p-8 bg-black/40 rounded-3xl border border-white/5 hover:border-yellow-500/50 transition-all group">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-yellow-500/10 flex items-center justify-center mb-6 group-hover:bg-yellow-500 group-hover:text-white transition-colors">
+                            <i class="fas fa-user-check text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4">Expert Curation</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            Our piercers are also stylists. We specialize in "Curated Ear" projects, designing unique
+                            jewelry placements that harmonize with your natural anatomy and personal aesthetic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid Component -->
+        <section class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-display font-extrabold mb-4">CORE SERVICES</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Ear -->
+                    <div
+                        class="group relative overflow-hidden rounded-3xl bg-dark/50 p-8 border border-white/5 hover:border-primary/50 transition-all duration-500">
+                        <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-30 transition-opacity">
+                            <i class="fas fa-ear text-7xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-extrabold mb-4">Ear Piercing</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">From classic lobes to complex industrial and
+                            cartilage projects. We utilize specialized free-hand and tool-assisted methods to ensure
+                            perfect alignment.</p>
+                        <ul class="text-sm space-y-2 mb-8 text-gray-500">
+                            <li><i class="fas fa-check text-primary mr-2"></i> Helix & Tragus</li>
+                            <li><i class="fas fa-check text-primary mr-2"></i> Conch & Daith</li>
+                            <li><i class="fas fa-check text-primary mr-2"></i> Industrial & Custom Scaffolding</li>
+                        </ul>
+                        <a href="services.html"
+                            class="text-primary font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            View Pricing & Details <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Nose -->
+                    <div
+                        class="group relative overflow-hidden rounded-3xl bg-dark/50 p-8 border border-white/5 hover:border-secondary/50 transition-all duration-500">
+                        <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-30 transition-opacity">
+                            <i class="fas fa-eye text-7xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-extrabold mb-4">Facial Piercing</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Elevate your profile with surgically precise nose,
+                            septum, and lip modifications. We assess your unique anatomy to find the most flattering
+                            placement.</p>
+                        <ul class="text-sm space-y-2 mb-8 text-gray-500">
+                            <li><i class="fas fa-check text-secondary mr-2"></i> Nostril & Septum</li>
+                            <li><i class="fas fa-check text-secondary mr-2"></i> Medusa & Philtrum</li>
+                            <li><i class="fas fa-check text-secondary mr-2"></i> Vertical Labret & Monroe</li>
+                        </ul>
+                        <a href="services.html"
+                            class="text-secondary font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            Explore facial options <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Body -->
+                    <div
+                        class="group relative overflow-hidden rounded-3xl bg-dark/50 p-8 border border-white/5 hover:border-accent/50 transition-all duration-500">
+                        <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-30 transition-opacity">
+                            <i class="fas fa-user-ninja text-7xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-extrabold mb-4">Body Piercing</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Navel, surface, and dermal piercings executed with
+                            the highest safety protocols. We provide specialized anatomy checks for all surface
+                            procedures.</p>
+                        <ul class="text-sm space-y-2 mb-8 text-gray-500">
+                            <li><i class="fas fa-check text-accent mr-2"></i> Navel & Nipple</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> Dermal Anchors & Microdermals</li>
+                            <li><i class="fas fa-check text-accent mr-2"></i> Surface Bars & Bridge Piercings</li>
+                        </ul>
+                        <a href="services.html"
+                            class="text-accent font-bold group-hover:translate-x-2 transition-transform inline-block">
+                            Review safety protocols <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-24 border-t border-white/5 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                    <div>
+                        <h2 class="text-4xl font-display font-extrabold mb-4">CLIENT VOICES</h2>
+                        <p class="text-gray-500">Don't just take our word for it—join our community of thousands.</p>
+                    </div>
+                    <div class="flex space-x-4 mt-8 md:mt-0">
+                        <button class="p-4 border border-white/10 rounded-full hover:bg-white/5 transition-colors">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button
+                            class="p-4 border border-white/10 rounded-full hover:bg-primary/20 hover:border-primary/50 transition-colors text-primary">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="p-10 bg-dark/50 border border-white/5 rounded-[40px] relative">
+                        <div class="text-yellow-500 mb-6 flex space-x-1">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 leading-relaxed">
+                            "I was terrified of my first cartilage piercing, but the team at Ethereal made me feel so
+                            safe. They explained the science behind the healing and helped me pick a beautiful solid
+                            gold piece. It healed perfectly!"
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-primary to-secondary"></div>
+                            <div>
+                                <h5 class="font-bold">Sarah Jenkins</h5>
+                                <span class="text-xs text-gray-500">Helix Client</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="p-10 bg-dark/50 border border-white/5 rounded-[40px] relative">
+                        <div class="text-yellow-500 mb-6 flex space-x-1">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 leading-relaxed">
+                            "The best selection of jewelry in the city. I've been to four different shops, but no one
+                            has the luxury options that Ethereal Ink does. Their sterilization process is
+                            hospital-grade, which is my top priority."
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-accent to-primary"></div>
+                            <div>
+                                <h5 class="font-bold">David Chen</h5>
+                                <span class="text-xs text-gray-500">Septum & Daith</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="p-10 bg-dark/50 border border-white/5 rounded-[40px] relative">
+                        <div class="text-yellow-500 mb-6 flex space-x-1">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-8 leading-relaxed">
+                            "Professional, clean, and incredibly talented artists. I had a custom ear curation done and
+                            it looks like a work of art. They took the time to map my ear anatomy perfectly before
+                            starting."
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-secondary to-accent"></div>
+                            <div>
+                                <h5 class="font-bold">Emma Wilson</h5>
+                                <span class="text-xs text-gray-500">Curated Ear Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-32 relative overflow-hidden">
+            <div
+                class="absolute inset-0 bg-primary/10 -z-10 bg-[radial-gradient(circle_at_50%_50%,rgba(124,58,237,0.1),transparent_70%)]">
+            </div>
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-5xl md:text-7xl font-display font-extrabold mb-8">READY FOR YOUR <br><span
+                        class="text-primary">NEXT ADORNMENT?</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mb-12 text-lg">
+                    Whether it's your first piercing or your fiftieth, we provide the same level of expert care and
+                    attention. Book your consultation today and experience the Ethereal difference.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <a href="booking.html"
+                        class="px-12 py-5 bg-white text-dark font-black uppercase tracking-tighter hover:bg-primary hover:text-white transition-all transform hover:-translate-y-1 block w-full md:w-auto">
+                        Secure Your Session
+                    </a>
+                    <a href="contact.html"
+                        class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">
+                        Questions? Speak with an artist <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Branding & Newsletter -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="flex items-center space-x-2 mb-6">
+                        <i class="fas fa-needle text-primary text-2xl rotate-45"></i>
+                        <span class="text-2xl font-display font-extrabold tracking-tighter text-white">ETHEREAL<span
+                                class="text-primary">INK</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-8">
+                        The valley's premier piercing and jewelry boutique. Committed to safety, ethics, and beautiful
+                        body art.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-tiktok"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-colors"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="aftercare-guide.html" class="hover:text-white transition-colors">Aftercare
+                                Guide</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition-colors">Safety FAQ</a></li>
+                        <li><a href="jewelry-catalog.html" class="hover:text-white transition-colors">Shop All
+                                Jewelry</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition-colors">Client Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Visit Us</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                            <span>123 Neon Boulevard, <br>Vibrant City, VC 54321</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-accent mr-3"></i>
+                            <span>(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-secondary mr-3"></i>
+                            <span>Tue - Sun: 12pm - 8pm</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Get notified about new jewelry drops and artist guest spots.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Address"
+                            class="bg-white/5 border border-white/10 rounded-l-lg px-4 py-3 text-sm focus:outline-none focus:border-primary w-full">
+                        <button class="bg-primary px-4 py-3 rounded-r-lg hover:bg-purple-700 transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div
+                class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 Ethereal Ink Piercing Studio. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                    <a href="#" class="hover:text-white">Sterilization Records</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+{
+  "ear": {
+    "title": "Ear Piercing Care",
+    "healingTime": "2-12 months",
+    "instructions": [
+      "Clean with saline solution 2x daily",
+      "Do not rotate the jewelry",
+      "Sleep on a travel pillow to avoid pressure",
+      "Rinse well after showering"
+    ],
+    "redFlags": [
+      "Extreme swelling spreading to the cheek",
+      "Yellow or green discharge with foul odor",
+      "Persistent heat in the area"
+    ]
+  },
+  "nose": {
+    "title": "Nose Piercing Care",
+    "healingTime": "3-6 months",
+    "instructions": [
+      "Spray saline solution on the outside",
+      "Gently clean inside with a saline-soaked swab",
+      "Be careful when blowing your nose",
+      "Avoid makeup near the piercing"
+    ],
+    "redFlags": [
+      "Bump forming near the entry point",
+      "Difficulty breathing through the nostril",
+      "Severe redness"
+    ]
+  },
+  "lip": {
+    "title": "Lip Piercing Care",
+    "healingTime": "2-4 months",
+    "instructions": [
+      "Rinse with alcohol-free mouthwash after eating",
+      "Clean the outside with saline 2x daily",
+      "Brush teeth gently to avoid catching jewelry",
+      "Avoid spicy or acidic foods for 2 weeks"
+    ]
+  },
+  "navel": {
+    "title": "Navel Piercing Care",
+    "healingTime": "6-12 months",
+    "instructions": [
+      "Clean with saline solution 2x daily",
+      "Avoid high-waisted pants or belts",
+      "Do not submerge in pools/hot tubs",
+      "Wear loose, breathable clothing"
+    ]
+  }
+}

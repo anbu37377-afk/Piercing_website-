@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | Ethereal Ink Piercing</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#7c3aed', secondary: '#ec4899', accent: '#06b6d4', dark: '#0a0a0a' } } } }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-mode bg-dark text-white font-[Inter]">
+
+    <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-needle text-primary text-2xl rotate-45"></i>
+                <span class="text-2xl font-display font-extrabold tracking-tighter text-white">ETHEREAL<span
+                        class="text-primary">INK</span></span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-sm font-semibold hover:text-primary transition-colors">Home</a>
+                <a href="index-v2.html" class="text-sm font-semibold hover:text-primary transition-colors">Home 2</a>
+                <a href="services.html" class="text-sm font-semibold hover:text-primary transition-colors">Services</a>
+                <a href="jewelry-catalog.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Jewelry</a>
+                <a href="artists.html" class="text-sm font-semibold hover:text-primary transition-colors">Artists</a>
+                <a href="aftercare-guide.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Aftercare</a>
+                <a href="gallery.html" class="text-sm font-semibold hover:text-primary transition-colors">Gallery</a>
+                <a href="dashboard.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Dashboard</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle RTL/LTR">
+                    <i class="fas fa-align-right"></i>
+                </button>
+                <a href="booking.html" class="btn-primary">Book Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-20">
+                <h1 class="text-6xl font-display font-black mb-6 uppercase tracking-tighter">KNOWLEDGE <br><span
+                        class="text-primary italic">DATABASE</span></h1>
+                <p class="text-gray-500 max-w-2xl mx-auto">Technical insights into our clinical procedures, material
+                    standards, and safety protocols. Knowledge is the first step to a successful modification.</p>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="space-y-16">
+                <!-- Section: Clinical Procedures -->
+                <section>
+                    <h2
+                        class="text-2xl font-display font-black mb-8 uppercase tracking-widest text-primary border-l-4 border-primary pl-6">
+                        01. Clinical Procedures</h2>
+                    <div class="space-y-4">
+                        <div
+                            class="group bg-zinc-900 border border-white/5 rounded-[2rem] overflow-hidden transition-all">
+                            <button
+                                class="w-full flex items-center justify-between p-8 text-left hover:bg-white/2 focus:outline-none faq-btn">
+                                <span class="font-bold text-lg">What is your sterilization protocol?</span>
+                                <i class="fas fa-plus text-xs text-primary transition-transform"></i>
+                            </button>
+                            <div class="faq-content h-0 overflow-hidden transition-all px-8">
+                                <div class="pb-8 text-gray-400 leading-relaxed text-sm space-y-4">
+                                    <p>We utilize a multi-stage sterilization process centered around the Statim G4
+                                        vacuum autoclave. This hospital-grade device uses pressurized steam to eliminate
+                                        99.9% of biological contaminants.</p>
+                                    <p>Every tool, piece of jewelry, and needle is processed in an individual indicator
+                                        pouch that changes color once full sterilization has been achieved. We maintain
+                                        digital logs of every cycle for quality assurance.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group bg-zinc-900 border border-white/5 rounded-[2rem] overflow-hidden transition-all">
+                            <button
+                                class="w-full flex items-center justify-between p-8 text-left hover:bg-white/2 focus:outline-none faq-btn">
+                                <span class="font-bold text-lg">Why don't you use piercing guns?</span>
+                                <i class="fas fa-plus text-xs text-primary transition-transform"></i>
+                            </button>
+                            <div class="faq-content h-0 overflow-hidden transition-all px-8">
+                                <div class="pb-8 text-gray-400 leading-relaxed text-sm">
+                                    <p>Piercing guns utilize blunt force trauma to push a dull stud through your tissue,
+                                        which can lead to significant scarring and complications. Furthermore, guns are
+                                        made of plastic and cannot be sterilized in an autoclave, posing a severe
+                                        cross-contamination risk. We exclusively use single-use, hollow surgical needles
+                                        for a clean, precision modification.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Materials & Jewelry -->
+                <section>
+                    <h2
+                        class="text-2xl font-display font-black mb-8 uppercase tracking-widest text-secondary border-l-4 border-secondary pl-6">
+                        02. Material Integrity</h2>
+                    <div class="space-y-4">
+                        <div
+                            class="group bg-zinc-900 border border-white/5 rounded-[2rem] overflow-hidden transition-all">
+                            <button
+                                class="w-full flex items-center justify-between p-8 text-left hover:bg-white/2 focus:outline-none faq-btn">
+                                <span class="font-bold text-lg">What metals do you use for initial piercings?</span>
+                                <i class="fas fa-plus text-xs text-secondary transition-transform"></i>
+                            </button>
+                            <div class="faq-content h-0 overflow-hidden transition-all px-8">
+                                <div class="pb-8 text-gray-400 leading-relaxed text-sm space-y-4">
+                                    <p>We strictly adhere to APP (Association of Professional Piercers) standards. For
+                                        initial procedures, we only utilize:</p>
+                                    <ul class="list-disc ml-6 space-y-2">
+                                        <li>**ASTM-F136 Implant Grade Titanium:** Hypoallergenic and nickel-free.</li>
+                                        <li>**14k/18k Solid Gold:** Nickel-free and alloyed for biocompatibility.</li>
+                                        <li>**Niobium:** A 99.9% pure elemental metal.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group bg-zinc-900 border border-white/5 rounded-[2rem] overflow-hidden transition-all">
+                            <button
+                                class="w-full flex items-center justify-between p-8 text-left hover:bg-white/2 focus:outline-none faq-btn">
+                                <span class="font-bold text-lg">Can I bring my own jewelry to my appointment?</span>
+                                <i class="fas fa-plus text-xs text-secondary transition-transform"></i>
+                            </button>
+                            <div class="faq-content h-0 overflow-hidden transition-all px-8">
+                                <div class="pb-8 text-gray-400 leading-relaxed text-sm">
+                                    <p>To ensure a safe and successful healing process, we can only pierce with jewelry
+                                        purchased from Ethereal Ink. This allows us to verify the metal's mill
+                                        certificate and guarantee its surface polish quality. We can, however, install
+                                        your personal heirloom jewelry into HEALED piercings after it has been
+                                        clinically cleaned by our staff.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Aftercare & Logistics -->
+                <section>
+                    <h2
+                        class="text-2xl font-display font-black mb-8 uppercase tracking-widest text-accent border-l-4 border-accent pl-6">
+                        03. Logistics & Support</h2>
+                    <div class="space-y-4">
+                        <div
+                            class="group bg-zinc-900 border border-white/5 rounded-[2rem] overflow-hidden transition-all">
+                            <button
+                                class="w-full flex items-center justify-between p-8 text-left hover:bg-white/2 focus:outline-none faq-btn">
+                                <span class="font-bold text-lg">What is your age and identification policy?</span>
+                                <i class="fas fa-plus text-xs text-accent transition-transform"></i>
+                            </button>
+                            <div class="faq-content h-0 overflow-hidden transition-all px-8">
+                                <div class="pb-8 text-gray-400 leading-relaxed text-sm space-y-4">
+                                    <p>Standard procedures require you to be 18+ with a valid government photo ID.
+                                        Minors (13-17) may be pierced for select procedures with a parent or legal
+                                        guardian present, biological birth certificate, and matching photo IDs for both
+                                        parties.</p>
+                                    <p>Please note: We do not perform any modifications on infants or children under the
+                                        age of 13 for any reason.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group bg-zinc-900 border border-white/5 rounded-[2rem] overflow-hidden transition-all">
+                            <button
+                                class="w-full flex items-center justify-between p-8 text-left hover:bg-white/2 focus:outline-none faq-btn">
+                                <span class="font-bold text-lg">How do I reschedule my appointment?</span>
+                                <i class="fas fa-plus text-xs text-accent transition-transform"></i>
+                            </button>
+                            <div class="faq-content h-0 overflow-hidden transition-all px-8">
+                                <div class="pb-8 text-gray-400 leading-relaxed text-sm">
+                                    <p>Rescheduling can be done through your digital portal or by emailing the studio at
+                                        least 48 hours prior to your session. Deposits are non-refundable but can be
+                                        transferred to a new date once with proper notice. No-shows or late
+                                        cancellations will forfeit their session fee.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div
+                class="mt-32 p-16 bg-gradient-to-br from-primary/10 to-transparent rounded-[4rem] border border-white/5 text-center relative overflow-hidden">
+                <h3 class="text-3xl font-display font-black mb-6 uppercase">UNRESOLVED INQUIRIES?</h3>
+                <p class="text-gray-500 mb-10 max-w-lg mx-auto">If your specific question isn't answered here, our
+                    artists are available for personalized digital consultations.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="contact.html"
+                        class="bg-primary px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:text-dark transition-all">Direct
+                        Message</a>
+                    <a href="booking.html"
+                        class="border border-white/10 px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:border-primary transition-all">Book
+                        Consult</a>
+                </div>
+                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 blur-[100px]"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer
+        class="bg-black border-t border-white/5 py-12 text-center text-gray-800 text-[10px] font-black uppercase tracking-[0.4em]">
+        <p>&copy; 2026 Ethereal Ink Collective • Precision Modification</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                const isOpen = content.style.height !== '0px' && content.style.height !== '';
+
+                // Close others
+                document.querySelectorAll('.faq-content').forEach(c => {
+                    c.style.height = '0px';
+                });
+                document.querySelectorAll('.faq-btn i').forEach(i => {
+                    i.classList.remove('fa-minus');
+                    i.classList.add('fa-plus');
+                    i.style.transform = 'rotate(0deg)';
+                });
+
+                if (!isOpen) {
+                    content.style.height = content.scrollHeight + 'px';
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

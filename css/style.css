@@ -1,0 +1,86 @@
+/* Custom Piercing Studio Styles */
+@layer base {
+  :root {
+    --primary: #7c3aed;
+    --secondary: #ec4899;
+    --accent: #06b6d4;
+    --dark-bg: #0f0f0f;
+    --dark-card: #18181b;
+    --light-bg: #ffffff;
+    --light-card: #f9fafb;
+  }
+
+  body {
+    @apply transition-colors duration-300;
+  }
+
+  body.dark-mode {
+    background-color: var(--dark-bg);
+    color: #ffffff;
+  }
+
+  body.light-mode {
+    background-color: var(--light-bg);
+    color: #18181b;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 rounded-full bg-purple-600 text-white font-semibold hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/50;
+  }
+
+  .neon-border {
+    @apply border border-purple-500/30 hover:border-purple-500 transition-all duration-300;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.1);
+  }
+
+  .neon-border:hover {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+  }
+
+  .neon-text-purple {
+    text-shadow: 0 0 8px rgba(124, 58, 237, 0.8);
+  }
+
+  .neon-text-pink {
+    text-shadow: 0 0 8px rgba(236, 72, 153, 0.8);
+  }
+
+  .neon-text-cyan {
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.8);
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .ml-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(124, 58, 237, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(124, 58, 237, 0.2);
+  }
+}
+
+.animate-glow {
+  animation: pulse-glow 3s infinite;
+}

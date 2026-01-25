@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Catalog | Ethereal Ink Piercing</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#7c3aed', secondary: '#ec4899', accent: '#06b6d4', dark: '#0f0f0f' } } } }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-mode">
+
+    <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-needle text-primary text-2xl rotate-45"></i>
+                <span class="text-2xl font-display font-extrabold tracking-tighter text-white">ETHEREAL<span
+                        class="text-primary">INK</span></span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-sm font-semibold hover:text-primary transition-colors">Home</a>
+                <a href="index-v2.html" class="text-sm font-semibold hover:text-primary transition-colors">Home 2</a>
+                <a href="services.html" class="text-sm font-semibold hover:text-primary transition-colors">Services</a>
+                <a href="jewelry-catalog.html" class="text-sm font-semibold text-primary">Jewelry</a>
+                <a href="artists.html" class="text-sm font-semibold hover:text-primary transition-colors">Artists</a>
+                <a href="aftercare-guide.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Aftercare</a>
+                <a href="gallery.html" class="text-sm font-semibold hover:text-primary transition-colors">Gallery</a>
+                <a href="dashboard.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Dashboard</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle RTL/LTR">
+                    <i class="fas fa-align-right"></i>
+                </button>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle Theme">
+                    <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
+                    <i id="theme-icon-light" class="fas fa-sun"></i>
+                </button>
+                <a href="booking.html" class="btn-primary">Book Now</a>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-dark border-b border-white/10 flex-col p-6 space-y-4 animate-fadeIn">
+            <a href="index.html" class="text-lg font-semibold">Home</a>
+            <a href="index-v2.html" class="text-lg font-semibold">Home 2</a>
+            <a href="services.html" class="text-lg font-semibold">Services</a>
+            <a href="jewelry-catalog.html" class="text-lg font-semibold">Jewelry</a>
+            <a href="artists.html" class="text-lg font-semibold">Artists</a>
+            <a href="aftercare-guide.html" class="text-lg font-semibold">Aftercare</a>
+            <a href="gallery.html" class="text-lg font-semibold">Gallery</a>
+            <a href="dashboard.html" class="text-lg font-semibold">Dashboard</a>
+            <a href="booking.html" class="btn-primary inline-block text-center">Book Appointment</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <div class="container mx-auto px-6">
+            <!-- Catalog Header & Filters -->
+            <div class="flex flex-col lg:flex-row gap-12 mb-24">
+                <!-- Filters Sidebar -->
+                <aside class="lg:w-1/4">
+                    <div class="sticky top-40 space-y-8">
+                        <div class="bg-white/5 rounded-3xl p-8 border border-white/10">
+                            <div class="flex items-center justify-between mb-8">
+                                <h3 class="text-xl font-bold uppercase tracking-tight">Refine</h3>
+                                <button id="clear-filters"
+                                    class="text-xs font-bold text-primary hover:underline uppercase">Reset</button>
+                            </div>
+
+                            <!-- Search -->
+                            <div class="mb-8">
+                                <label
+                                    class="block text-[10px] uppercase tracking-widest font-black text-gray-500 mb-2">Keyword</label>
+                                <input type="text" id="jewelry-search" placeholder="Studs, Hoops, Gold..."
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all">
+                            </div>
+
+                            <!-- Material -->
+                            <div class="mb-8">
+                                <label
+                                    class="block text-[10px] uppercase tracking-widest font-black text-gray-500 mb-4">Material</label>
+                                <div class="space-y-3">
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="hidden filter-checkbox" value="titanium">
+                                        <span
+                                            class="w-5 h-5 border border-white/20 rounded mr-3 flex items-center justify-center group-hover:border-primary transition-colors"><i
+                                                class="fas fa-check text-[10px] text-white hidden"></i></span>
+                                        <span
+                                            class="text-sm text-gray-400 group-hover:text-white transition-colors uppercase font-bold tracking-tighter">Titanium
+                                            (ASTM-F136)</span>
+                                    </label>
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="hidden filter-checkbox" value="gold">
+                                        <span
+                                            class="w-5 h-5 border border-white/20 rounded mr-3 flex items-center justify-center group-hover:border-primary transition-colors"><i
+                                                class="fas fa-check text-[10px] text-white hidden"></i></span>
+                                        <span
+                                            class="text-sm text-gray-400 group-hover:text-white transition-colors uppercase font-bold tracking-tighter">14k
+                                            Solid Gold</span>
+                                    </label>
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="hidden filter-checkbox" value="niobium">
+                                        <span
+                                            class="w-5 h-5 border border-white/20 rounded mr-3 flex items-center justify-center group-hover:border-primary transition-colors"><i
+                                                class="fas fa-check text-[10px] text-white hidden"></i></span>
+                                        <span
+                                            class="text-sm text-gray-400 group-hover:text-white transition-colors uppercase font-bold tracking-tighter">Niobium</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Style -->
+                            <div class="mb-8">
+                                <label
+                                    class="block text-[10px] uppercase tracking-widest font-black text-gray-500 mb-4">Silhouette</label>
+                                <div class="space-y-3">
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="hidden filter-checkbox" value="stud">
+                                        <span
+                                            class="w-5 h-5 border border-white/20 rounded mr-3 flex items-center justify-center group-hover:border-primary transition-colors"><i
+                                                class="fas fa-check text-[10px] text-white hidden"></i></span>
+                                        <span
+                                            class="text-sm text-gray-400 group-hover:text-white transition-colors uppercase font-bold tracking-tighter">Studs
+                                            & Ends</span>
+                                    </label>
+                                    <label class="flex items-center cursor-pointer group">
+                                        <input type="checkbox" class="hidden filter-checkbox" value="hoop">
+                                        <span
+                                            class="w-5 h-5 border border-white/20 rounded mr-3 flex items-center justify-center group-hover:border-primary transition-colors"><i
+                                                class="fas fa-check text-[10px] text-white hidden"></i></span>
+                                        <span
+                                            class="text-sm text-gray-400 group-hover:text-white transition-colors uppercase font-bold tracking-tighter">Hoops
+                                            & Clickers</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-8 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl border border-white/5">
+                            <h4 class="text-xs font-black uppercase tracking-widest mb-4">Fitment Guide</h4>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Not sure which gauge or length you need? Anatomy varies significantly—we recommend a
+                                professional sizing session before purchasing.
+                            </p>
+                            <a href="booking.html" class="text-xs font-bold text-white uppercase underline">Book Sizing
+                                Session</a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Grid -->
+                <div class="lg:w-3/4">
+                    <div class="flex items-center justify-between mb-12">
+                        <h2 class="text-4xl font-display font-black uppercase tracking-tighter">THE <span
+                                class="text-primary">COLLECTION</span></h2>
+                        <span id="results-count" class="text-xs uppercase font-black text-gray-500">24 Items
+                            Found</span>
+                    </div>
+
+                    <div id="jewelry-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Jewelry Cards will be injected by filter.js -->
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-white/5 mb-24">
+
+            <!-- Educational Content Section -->
+            <div class="max-w-6xl mx-auto space-y-32">
+                <!-- Materials & Gemstones -->
+                <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl font-display font-black mb-8 uppercase">MATERIAL <span
+                                class="text-secondary">INTEGRITY</span></h2>
+                        <div class="space-y-6 text-gray-400 leading-relaxed">
+                            <p>
+                                At Ethereal Ink, we believe that what you put inside your body is just as important as
+                                how it looks on the outside. This is why we exclusively stock internal-thread or
+                                threadless jewelry from the world's leading manufacturers.
+                            </p>
+                            <p>
+                                Our **Implant Grade Titanium (ASTM-F136)** is sourced from verified medical suppliers.
+                                Unlike surgical steel—which often contains hidden nickel and lead—our titanium is
+                                hypoallergenic, corrosion-resistant, and lighter than steel. It's the same material used
+                                in heart valves and tooth implants for a reason: the body loves it.
+                            </p>
+                            <p>
+                                When it comes to **Solid gold**, we never compromise. Our 14k and 18k gold collections
+                                are free of toxic alloys like cadmium. Each piece is hand-polished to a "mirror finish."
+                                This isn't just for shine; a smoother surface means fewer microscopic places for
+                                bacteria to grow, leading to a faster and healthier healing process.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1616150638538-ffb0679a3fc4?w=800"
+                            alt="Jewelry Detail" class="rounded-[40px] shadow-2xl">
+                        <div class="absolute -top-8 -right-8 w-48 h-48 bg-secondary/20 blur-[60px] -z-10"></div>
+                    </div>
+                </section>
+
+                <!-- Gemstone Grading -->
+                <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="lg:order-2">
+                        <h2 class="text-4xl font-display font-black mb-8 uppercase">GEMSTONE <span
+                                class="text-accent">ETHICS</span></h2>
+                        <div class="space-y-6 text-gray-400 leading-relaxed">
+                            <p>
+                                Every sparkle has a story. Our collection features hand-set gemstones, from
+                                conflict-free diamonds to ethically sourced semi-precious stones like genuine Opal,
+                                Moonstone, and Turquoise.
+                            </p>
+                            <p>
+                                We utilize **Swarovski Zirconia** for our budget-conscious collections, ensuring that
+                                even our more accessible pieces feature the finest precision-cut crystals in the
+                                industry. For our high-end luxury requests, we work with guest lapidaries to source rare
+                                stones that are custom-cut for the body.
+                            </p>
+                            <p>
+                                Unlike many "fast-fashion" jewelry brands, our stones are held in place by secure prongs
+                                or bezel settings—never glue. This ensures the longevity of your investment and prevents
+                                stones from falling out during daily wear or cleaning cycles.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:order-1 relative">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800"
+                            alt="Gemstone Detail" class="rounded-[40px] shadow-2xl">
+                        <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-accent/20 blur-[60px] -z-10"></div>
+                    </div>
+                </section>
+
+                <!-- Craftsmanship Process -->
+                <section class="text-center bg-white/5 p-16 rounded-[60px] border border-white/10">
+                    <h2 class="text-4xl font-display font-black mb-12 uppercase">THE <span
+                            class="text-primary">ARTISAN</span> JOURNEY</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <div>
+                            <div class="text-primary text-4xl mb-6"><i class="fas fa-drafting-compass"></i></div>
+                            <h4 class="text-xl font-bold mb-4 uppercase">Design & CAD</h4>
+                            <p class="text-sm text-gray-500">Every piece begins as a digital sculpt, optimized for the
+                                unique dimensions of body anatomy.</p>
+                        </div>
+                        <div>
+                            <div class="text-secondary text-4xl mb-6"><i class="fas fa-hammer"></i></div>
+                            <h4 class="text-xl font-bold mb-4 uppercase">Hand Forging</h4>
+                            <p class="text-sm text-gray-500">Our gold pieces are cast in small batches and hand-finished
+                                by master goldsmiths.</p>
+                        </div>
+                        <div>
+                            <div class="text-accent text-4xl mb-6"><i class="fas fa-microscope"></i></div>
+                            <h4 class="text-xl font-bold mb-4 uppercase">QC Inspection</h4>
+                            <p class="text-sm text-gray-500">Pieces undergo 30x magnification inspection before entering
+                                our sterilization cycle.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Care & Buying Guide -->
+                <section class="p-12 border border-white/5 rounded-[40px] bg-dark">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl font-display font-black uppercase">INVESTMENT PROTECTION GUIDE</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                        <div>
+                            <h4 class="font-bold text-lg mb-6 flex items-center"><i
+                                    class="fas fa-ruler-combined mr-3 text-primary"></i> Sizing for Success</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                                Body jewelry sizing involves three main measurements: **Gauge** (the thickness of the
+                                post), **Length** (for studs/barbells), and **Diameter** (for hoops). Using a piece that
+                                is too short can leads to "embedding," while too long can cause "migration."
+                            </p>
+                            <ul class="space-y-3 text-xs text-gray-500">
+                                <li><i class="fas fa-chevron-right mr-2 text-primary"></i> 18g/16g: Standard for most
+                                    ear & facial piercings.</li>
+                                <li><i class="fas fa-chevron-right mr-2 text-primary"></i> 14g: Common for navels,
+                                    nipples, and industrials.</li>
+                                <li><i class="fas fa-chevron-right mr-2 text-primary"></i> 20g: Classic lobe size (not
+                                    recommended for cartilage).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-6 flex items-center"><i
+                                    class="fas fa-soap mr-3 text-secondary"></i> Daily Maintenance</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                                Fine jewelry requires fine care. For healed piercings, we recommend removing jewelry
+                                every 30 days for deep cleaning in an ultrasonic bath or with a soft-bristled brush and
+                                mild soap.
+                            </p>
+                            <p class="text-xs text-gray-500 italic">
+                                *Never use harsh chemicals like hydrogen peroxide or alcohol on your fine jewelry,
+                                especially pieces containing organic stones like Opal or Turquoise.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Quick View Modal -->
+    <div id="quick-view" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-6 md:p-12">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-md" id="modal-overlay"></div>
+        <div
+            class="relative bg-dark border border-white/10 rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row">
+            <button id="close-modal" class="absolute top-6 right-6 text-2xl z-20"><i class="fas fa-times"></i></button>
+            <div class="md:w-1/2 h-96 md:h-auto bg-neutral-900">
+                <img id="modal-img" src="" class="w-full h-full object-cover">
+            </div>
+            <div class="md:w-1/2 p-12">
+                <span id="modal-material"
+                    class="text-xs font-black text-primary uppercase tracking-widest mb-4 block">Titanium</span>
+                <h2 id="modal-name" class="text-4xl font-display font-black mb-4">Product Name</h2>
+                <p id="modal-price" class="text-2xl font-black text-white mb-8">$45</p>
+                <div class="space-y-6 mb-12">
+                    <div>
+                        <label class="block text-xs uppercase font-black text-gray-500 mb-2">Available Gauges</label>
+                        <div id="modal-gauges" class="flex space-x-2">
+                            <!-- Gauges -->
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase font-black text-gray-500 mb-2">Compatibility</label>
+                        <p id="modal-compatibility" class="text-sm text-gray-400">Fits most ear and facial piercings.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="flex-1 bg-primary py-4 rounded-xl font-bold hover:bg-purple-700 transition-all">Add
+                        to Cart</button>
+                    <button class="px-6 border border-white/10 rounded-xl hover:bg-white/5 transition-colors"><i
+                            class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Portal | Ethereal Ink Piercing</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#7c3aed', secondary: '#ec4899', accent: '#06b6d4', dark: '#0a0a0a' } } } }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-mode bg-dark text-white font-[Inter]">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside id="sidebar"
+            class="w-64 bg-zinc-900 border-r border-white/5 flex flex-col fixed h-full z-40 transition-transform lg:translate-x-0 -translate-x-full">
+            <div class="p-8">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <i class="fas fa-needle text-primary text-xl rotate-45"></i>
+                    <span class="text-xl font-[Montserrat] font-black tracking-tighter">ETHEREAL<span
+                            class="text-primary">INK</span></span>
+                </a>
+            </div>
+
+            <nav class="flex-1 px-4 space-y-2">
+                <a href="#" class="flex items-center space-x-3 p-4 rounded-2xl bg-primary/10 text-primary font-bold">
+                    <i class="fas fa-th-large"></i> <span>Overview</span>
+                </a>
+                <a href="#"
+                    class="flex items-center space-x-3 p-4 rounded-2xl text-gray-400 hover:bg-white/5 transition-colors">
+                    <i class="fas fa-heart-pulse"></i> <span>My Piercings</span>
+                </a>
+                <a href="#"
+                    class="flex items-center space-x-3 p-4 rounded-2xl text-gray-400 hover:bg-white/5 transition-colors">
+                    <i class="fas fa-gem"></i> <span>Jewelry Collection</span>
+                </a>
+                <a href="#"
+                    class="flex items-center space-x-3 p-4 rounded-2xl text-gray-400 hover:bg-white/5 transition-colors">
+                    <i class="fas fa-calendar-check"></i> <span>Appointments</span>
+                </a>
+                <a href="#"
+                    class="flex items-center space-x-3 p-4 rounded-2xl text-gray-400 hover:bg-white/5 transition-colors">
+                    <i class="fas fa-gear"></i> <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="p-6">
+                <div
+                    class="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl p-4 border border-white/5 mb-6">
+                    <p class="text-xs font-bold text-gray-400 mb-2">LIFETIME STREAK</p>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-fire text-secondary text-2xl"></i>
+                        <span class="text-2xl font-[Montserrat] font-black">12 Days</span>
+                    </div>
+                </div>
+                <a href="login.html"
+                    class="flex items-center space-x-3 p-4 rounded-2xl text-red-400 hover:bg-red-400/10 transition-colors">
+                    <i class="fas fa-arrow-right-from-bracket"></i> <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 lg:ml-64">
+            <!-- Standardized Header -->
+            <header
+                class="fixed lg:w-[calc(100%-16rem)] w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+                <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <button class="lg:hidden text-2xl" id="toggle-sidebar-mobile"><i
+                                class="fas fa-bars"></i></button>
+                        <a href="index.html" class="lg:hidden flex items-center space-x-2">
+                            <i class="fas fa-needle text-primary text-xl rotate-45"></i>
+                            <span class="text-xl font-[Montserrat] font-black tracking-tighter">ETHEREAL<span
+                                    class="text-primary">INK</span></span>
+                        </a>
+                    </div>
+
+                    <!-- Desktop Navigation (Simplified for Dashboard) -->
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="index.html"
+                            class="text-xs font-black uppercase tracking-widest hover:text-primary transition-all">Home</a>
+                        <a href="services.html"
+                            class="text-xs font-black uppercase tracking-widest hover:text-primary transition-all">Services</a>
+                        <a href="jewelry-catalog.html"
+                            class="text-xs font-black uppercase tracking-widest hover:text-primary transition-all">Catalog</a>
+                        <a href="booking.html" class="text-xs font-black uppercase tracking-widest text-primary">New
+                            Booking</a>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <div class="relative group">
+                            <button class="p-2 rounded-full hover:bg-white/10 transition-colors relative">
+                                <i class="fas fa-bell"></i>
+                                <span
+                                    class="absolute top-0 right-0 w-2 h-2 bg-secondary rounded-full border-2 border-dark"></span>
+                            </button>
+                            <!-- Notification Dropdown -->
+                        </div>
+                        <div
+                            class="flex items-center space-x-3 ml-4 bg-white/5 py-2 px-4 rounded-full border border-white/5">
+                            <img src="https://i.pravatar.cc/100?img=12"
+                                class="w-6 h-6 rounded-full border border-primary/50">
+                            <span class="text-xs font-black uppercase tracking-tighter">Alex Carter</span>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="p-8 pt-24 lg:p-12 lg:pt-32">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+                    <div>
+                        <h1 class="text-5xl font-[Montserrat] font-black mb-4 uppercase tracking-tighter">THE <span
+                                class="text-primary">PORTAL</span></h1>
+                        <p class="text-gray-500 text-lg">Your biological journey. Tracked, measured, and curated.</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <button
+                            class="px-8 py-3 bg-primary text-white font-black uppercase tracking-widest text-xs rounded-xl hover:bg-white hover:text-dark transition-all shadow-lg shadow-primary/20">
+                            Start Curation
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats Widgets -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div
+                        class="bg-zinc-900 p-8 rounded-[2.5rem] border border-white/5 hover:border-primary/20 transition-all group">
+                        <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-6">Total
+                            Installations</p>
+                        <div class="flex items-end justify-between">
+                            <p class="text-5xl font-black text-white group-hover:text-primary transition-colors">04</p>
+                            <span class="text-[10px] text-green-500 font-bold mb-1">+1 this year</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-zinc-900 p-8 rounded-[2.5rem] border border-white/5 hover:border-secondary/20 transition-all group">
+                        <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-6">Collective points
+                        </p>
+                        <div class="flex items-end justify-between">
+                            <p class="text-5xl font-black text-white group-hover:text-secondary transition-colors">850
+                            </p>
+                            <span class="text-[10px] text-gray-500 font-bold mb-1">Tier: Gold</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-zinc-900 p-8 rounded-[2.5rem] border border-white/5 hover:border-accent/20 transition-all group">
+                        <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-6">Wishlist value
+                        </p>
+                        <div class="flex items-end justify-between">
+                            <p class="text-5xl font-black text-white group-hover:text-accent transition-colors">$420</p>
+                            <span class="text-[10px] text-gray-500 font-bold mb-1">3 items</span>
+                        </div>
+                    </div>
+                    <div class="bg-zinc-900 p-8 rounded-[2.5rem] border border-white/5 opacity-80">
+                        <p class="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-6">Healing uptime
+                        </p>
+                        <p class="text-xl font-black text-white uppercase mt-4">98.4% Efficiency</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- My Piercings & Aftercare Tracker -->
+                    <div class="lg:col-span-2 space-y-12">
+                        <section>
+                            <div class="flex items-center justify-between mb-8">
+                                <h2 class="text-2xl font-black uppercase tracking-tight flex items-center">
+                                    <i class="fas fa-dna text-primary mr-4"></i> BIOLOGICAL STATUS
+                                </h2>
+                                <button
+                                    class="text-[10px] font-black uppercase tracking-widest text-primary hover:underline">Full
+                                    History</button>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <!-- Piercing Card -->
+                                <div
+                                    class="bg-zinc-900 p-8 rounded-[3rem] border border-white/5 space-y-8 relative overflow-hidden group">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <h3 class="text-2xl font-black uppercase tracking-tighter">Left Daith</h3>
+                                            <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest font-bold">
+                                                Procedure: Oct 15, 2025</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <span class="text-xl font-black text-primary">65%</span>
+                                            <p class="text-[8px] text-gray-600 uppercase font-black">Healing Index</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-full bg-white/5 h-3 rounded-full overflow-hidden">
+                                        <div class="bg-gradient-to-r from-primary to-purple-400 h-full transition-all duration-1000"
+                                            style="width: 65%"></div>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="p-4 bg-white/2 rounded-2xl border border-white/5">
+                                            <p class="text-[8px] text-gray-600 uppercase font-black mb-1">Last Update
+                                            </p>
+                                            <p class="text-[10px] font-bold">2 Days Ago</p>
+                                        </div>
+                                        <div class="p-4 bg-white/2 rounded-2xl border border-white/5">
+                                            <p class="text-[8px] text-gray-600 uppercase font-black mb-1">Sensitivity
+                                            </p>
+                                            <p class="text-[10px] font-bold text-green-500">Minimal</p>
+                                        </div>
+                                    </div>
+                                    <a href="aftercare-guide.html"
+                                        class="block w-full text-center py-4 bg-white/5 hover:bg-white text-dark group-hover:bg-primary group-hover:text-white rounded-2xl transition-all text-[10px] font-black uppercase tracking-widest">
+                                        Update Healing Log
+                                    </a>
+                                </div>
+
+                                <div
+                                    class="bg-zinc-900 p-8 rounded-[3rem] border border-white/5 space-y-8 relative overflow-hidden group">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <h3 class="text-2xl font-black uppercase tracking-tighter">Septum</h3>
+                                            <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest font-bold">
+                                                Procedure: Dec 1, 2025</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <span class="text-xl font-black text-accent">90%</span>
+                                            <p class="text-[8px] text-gray-600 uppercase font-black">Healing Index</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-full bg-white/5 h-3 rounded-full overflow-hidden">
+                                        <div class="bg-gradient-to-r from-accent to-cyan-400 h-full transition-all duration-1000"
+                                            style="width: 90%"></div>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="p-4 bg-white/2 rounded-2xl border border-white/5">
+                                            <p class="text-[8px] text-gray-600 uppercase font-black mb-1">Downsize</p>
+                                            <p class="text-[10px] font-bold text-primary">In 4 Days</p>
+                                        </div>
+                                        <div class="p-4 bg-white/2 rounded-2xl border border-white/5">
+                                            <p class="text-[8px] text-gray-600 uppercase font-black mb-1">Stability</p>
+                                            <p class="text-[10px] font-bold text-green-500">High</p>
+                                        </div>
+                                    </div>
+                                    <a href="booking.html"
+                                        class="block w-full text-center py-4 bg-white/5 hover:bg-white text-dark group-hover:bg-accent group-hover:text-white rounded-2xl transition-all text-[10px] font-black uppercase tracking-widest">
+                                        Book Downsize
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Collective Activity / Community Feed -->
+                        <section
+                            class="bg-zinc-900/50 p-10 rounded-[3.5rem] border border-white/5 relative overflow-hidden">
+                            <h2 class="text-2xl font-black mb-8 uppercase tracking-tight flex items-center">
+                                <i class="fas fa-users text-secondary mr-4"></i> THE COLLECTIVE FEED
+                            </h2>
+                            <div class="space-y-8 relative z-10">
+                                <div class="flex gap-6 items-start pb-8 border-b border-white/5">
+                                    <img src="https://i.pravatar.cc/100?img=5"
+                                        class="w-12 h-12 rounded-2xl shrink-0 grayscale hover:grayscale-0 transition-all cursor-pointer">
+                                    <div>
+                                        <p class="text-sm font-bold text-white mb-2">Jax Sterling <span
+                                                class="text-gray-600 text-[10px] uppercase font-black ml-2">• 1 Hour
+                                                Ago</span></p>
+                                        <p class="text-sm text-gray-500 leading-relaxed">"Just received a shipment of
+                                            genuine Australian Opals for the upcoming Gold Capsule drop. First-look
+                                            priority for our Gold Tier members starts tomorrow."</p>
+                                        <div class="flex gap-4 mt-4">
+                                            <button class="text-[10px] font-black text-primary uppercase">Reserve
+                                                Slot</button>
+                                            <button class="text-[10px] font-black text-gray-600 uppercase">View
+                                                Items</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 items-start">
+                                    <div
+                                        class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0">
+                                        <i class="fas fa-calendar-star text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-bold text-white mb-2">Event Announcement <span
+                                                class="text-gray-600 text-[10px] uppercase font-black ml-2">• 6 Hours
+                                                Ago</span></p>
+                                        <p class="text-sm text-gray-500 leading-relaxed">Guest artist residency
+                                            confirmed: **Marcus Vane (London)** will be in-studio Feb 20-25. Booking
+                                            opens for Silver+ members at midnight.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute -right-20 -top-20 w-80 h-80 bg-secondary/5 blur-[100px] -z-10"></div>
+                        </section>
+                    </div>
+
+                    <!-- Sidebar Content -->
+                    <div class="space-y-12">
+                        <!-- Jewelry Wishlist -->
+                        <section>
+                            <h2 class="text-xl font-black mb-8 uppercase tracking-widest">MY WISHLIST</h2>
+                            <div class="space-y-4">
+                                <div
+                                    class="bg-zinc-900 p-5 rounded-[2rem] border border-white/5 flex items-center gap-5 group hover:border-primary/30 transition-all">
+                                    <div class="w-20 h-20 rounded-2xl overflow-hidden shrink-0">
+                                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200"
+                                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-sm font-black uppercase tracking-tighter">Lava Clicker</h4>
+                                        <p class="text-[10px] text-primary uppercase font-black mt-1">$120 • 14k Gold
+                                        </p>
+                                        <button
+                                            class="mt-2 text-[10px] font-black text-gray-500 hover:text-white transition-colors uppercase">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-zinc-900 p-5 rounded-[2rem] border border-white/5 flex items-center gap-5 group hover:border-accent/30 transition-all">
+                                    <div class="w-20 h-20 rounded-2xl overflow-hidden shrink-0">
+                                        <img src="https://images.unsplash.com/photo-1611955167811-4711904bb9f8?w=200"
+                                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="text-sm font-black uppercase tracking-tighter">Trinity Stud</h4>
+                                        <p class="text-[10px] text-accent uppercase font-black mt-1">$65 • Titanium</p>
+                                        <button
+                                            class="mt-2 text-[10px] font-black text-gray-500 hover:text-white transition-colors uppercase">Buy
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <a href="jewelry-catalog.html"
+                                    class="block text-center py-6 border border-dashed border-white/10 rounded-[2rem] text-[10px] font-black text-gray-600 uppercase tracking-widest hover:border-primary hover:text-white transition-all">
+                                    Discover More Craft
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Loyalty Program Detail -->
+                        <section
+                            class="bg-gradient-to-br from-primary to-purple-900 p-10 rounded-[3rem] text-white shadow-2xl relative overflow-hidden group">
+                            <div class="relative z-10">
+                                <h2 class="text-2xl font-black mb-4 uppercase tracking-tighter leading-tight">COLLECTIVE
+                                    <br>LOYALTY</h2>
+                                <p class="text-xs text-white/70 mb-8 leading-relaxed">Your next $25 credit unlocks in
+                                    150 points. Keep healing, keep collecting.</p>
+                                <div class="w-full bg-white/20 h-1 rounded-full mb-8">
+                                    <div class="bg-white h-full" style="width: 85%"></div>
+                                </div>
+                                <button
+                                    class="w-full py-4 bg-white text-dark font-black uppercase tracking-widest text-[10px] rounded-2xl hover:bg-dark hover:text-white transition-all">
+                                    View Tier Perks
+                                </button>
+                            </div>
+                            <i
+                                class="fas fa-crown absolute top-10 right-10 text-6xl text-white/5 group-hover:scale-125 transition-transform duration-700"></i>
+                        </section>
+
+                        <!-- Quick Settings -->
+                        <section class="p-8 bg-zinc-900/30 rounded-[2.5rem] border border-white/5">
+                            <h2 class="text-xs font-black text-gray-500 uppercase tracking-widest mb-6 px-2">Preference
+                                center</h2>
+                            <div class="space-y-6">
+                                <div class="flex items-center justify-between px-2">
+                                    <span class="text-xs font-bold text-gray-400">Newsletter</span>
+                                    <div class="w-8 h-4 bg-primary rounded-full relative"><span
+                                            class="absolute right-0.5 top-0.5 w-3 h-3 bg-white rounded-full"></span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between px-2">
+                                    <span class="text-xs font-bold text-gray-400">App Alerts</span>
+                                    <div class="w-8 h-4 bg-primary rounded-full relative"><span
+                                            class="absolute right-0.5 top-0.5 w-3 h-3 bg-white rounded-full"></span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between px-2">
+                                    <span class="text-xs font-bold text-gray-400">SMS Reminders</span>
+                                    <div class="w-8 h-4 bg-white/10 rounded-full relative"><span
+                                            class="absolute left-0.5 top-0.5 w-3 h-3 bg-white/20 rounded-full"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Sidebar Toggle for Mobile
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('toggle-sidebar');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+        }
+    </script>
+</body>
+
+</html>

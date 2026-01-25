@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>404 - Piercing Not Found | Ethereal Ink</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: #0a0a0a;
+            font-family: 'Inter', sans-serif;
+            color: white;
+        }
+
+        .glitch {
+            position: relative;
+            color: white;
+            font-size: 8rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00c1;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+            animation: glitch-anim2 1s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% {
+                clip: rect(10px, 9999px, 10px, 0);
+            }
+
+            100% {
+                clip: rect(80px, 9999px, 100px, 0);
+            }
+        }
+
+        @keyframes glitch-anim2 {
+            0% {
+                clip: rect(70px, 9999px, 80px, 0);
+            }
+
+            100% {
+                clip: rect(10px, 9999px, 30px, 0);
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen dark-mode">
+
+    <!-- Standardized Header -->
+    <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-needle text-purple-600 text-2xl rotate-45"></i>
+                <span class="text-2xl font-[Montserrat] font-extrabold tracking-tighter text-white">ETHEREAL<span
+                        class="text-purple-600">INK</span></span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-sm font-semibold hover:text-purple-600 transition-colors">Home</a>
+                <a href="index-v2.html" class="text-sm font-semibold hover:text-purple-600 transition-colors">Home 2</a>
+                <a href="services.html"
+                    class="text-sm font-semibold hover:text-purple-600 transition-colors">Services</a>
+                <a href="jewelry-catalog.html"
+                    class="text-sm font-semibold hover:text-purple-600 transition-colors">Jewelry</a>
+                <a href="artists.html" class="text-sm font-semibold hover:text-purple-600 transition-colors">Artists</a>
+                <a href="aftercare-guide.html"
+                    class="text-sm font-semibold hover:text-purple-600 transition-colors">Aftercare</a>
+                <a href="gallery.html" class="text-sm font-semibold hover:text-purple-600 transition-colors">Gallery</a>
+                <a href="dashboard.html"
+                    class="text-sm font-semibold hover:text-purple-600 transition-colors">Dashboard</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle RTL/LTR">
+                    <i class="fas fa-align-right"></i>
+                </button>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle Theme">
+                    <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
+                    <i id="theme-icon-light" class="fas fa-sun"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="pt-32 flex flex-col items-center justify-center text-center p-6">
+        <div class="relative mb-8">
+            <i
+                class="fas fa-ear text-purple-600/20 text-[15rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-12"></i>
+            <h1 class="glitch">404</h1>
+        </div>
+
+        <h2 class="text-3xl font-[Montserrat] font-black text-white mb-4 uppercase tracking-tighter">Piercing Not Found
+        </h2>
+        <p class="text-gray-500 max-w-sm mb-12">Looks like this page slipped out. Even perfectly placed piercings can
+            migrate sometimes.</p>
+
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+            <a href="index.html"
+                class="px-10 py-4 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition-all">Back
+                to Home</a>
+            <a href="booking.html"
+                class="px-10 py-4 border border-white/20 text-white font-bold rounded-full hover:bg-white/5 transition-all">Book
+                Session</a>
+        </div>
+
+        <div class="mt-20 flex items-center space-x-4">
+            <div class="relative w-64">
+                <input type="text" placeholder="Search for something else..."
+                    class="w-full bg-white/5 border border-white/10 rounded-full py-3 px-6 text-sm text-white focus:outline-none focus:border-purple-500">
+                <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </div>
+</body>
+
+</html>

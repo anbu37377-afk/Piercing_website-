@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftercare Guide | Ethereal Ink Piercing</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#7c3aed', secondary: '#ec4899', accent: '#06b6d4', dark: '#0f0f0f' } } } }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-mode">
+
+    <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-needle text-primary text-2xl rotate-45"></i>
+                <span class="text-2xl font-display font-extrabold tracking-tighter text-white">ETHEREAL<span
+                        class="text-primary">INK</span></span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-sm font-semibold hover:text-primary transition-colors">Home</a>
+                <a href="index-v2.html" class="text-sm font-semibold hover:text-primary transition-colors">Home 2</a>
+                <a href="services.html" class="text-sm font-semibold hover:text-primary transition-colors">Services</a>
+                <a href="jewelry-catalog.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Jewelry</a>
+                <a href="artists.html" class="text-sm font-semibold hover:text-primary transition-colors">Artists</a>
+                <a href="aftercare-guide.html" class="text-sm font-semibold text-primary">Aftercare</a>
+                <a href="gallery.html" class="text-sm font-semibold hover:text-primary transition-colors">Gallery</a>
+                <a href="dashboard.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Dashboard</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle RTL/LTR">
+                    <i class="fas fa-align-right"></i>
+                </button>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle Theme">
+                    <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
+                    <i id="theme-icon-light" class="fas fa-sun"></i>
+                </button>
+                <a href="booking.html" class="btn-primary">Book Now</a>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-dark border-b border-white/10 flex-col p-6 space-y-4 animate-fadeIn">
+            <a href="index.html" class="text-lg font-semibold">Home</a>
+            <a href="index-v2.html" class="text-lg font-semibold">Home 2</a>
+            <a href="services.html" class="text-lg font-semibold">Services</a>
+            <a href="jewelry-catalog.html" class="text-lg font-semibold">Jewelry</a>
+            <a href="artists.html" class="text-lg font-semibold">Artists</a>
+            <a href="aftercare-guide.html" class="text-lg font-semibold">Aftercare</a>
+            <a href="gallery.html" class="text-lg font-semibold">Gallery</a>
+            <a href="dashboard.html" class="text-lg font-semibold">Dashboard</a>
+            <a href="booking.html" class="btn-primary inline-block text-center">Book Appointment</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-6xl md:text-8xl font-display font-black mb-4 uppercase tracking-tighter">THE <span
+                        class="text-primary italic">PROTOCOLS</span></h1>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                    Successful body modification is 50% technical execution and 50% diligent aftercare. Explore our
+                    interactive systems below to ensure a perfect healing journey.
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 items-center lg:items-start mb-32">
+                <!-- Body Diagram -->
+                <div
+                    class="lg:w-1/2 p-8 bg-black/50 rounded-[3rem] border border-white/5 flex items-center justify-center relative group overflow-hidden">
+                    <div id="body-diagram-container"
+                        class="w-full max-w-sm relative z-10 transition-transform duration-700 group-hover:scale-105">
+                        <!-- SVG injected here -->
+                        <include-svg src="assets/body-diagram.svg"></include-svg>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                </div>
+
+                <!-- Info Column -->
+                <div class="lg:w-1/2 space-y-12">
+                    <!-- Instruction Card -->
+                    <div id="aftercare-info"
+                        class="bg-white/5 rounded-[40px] p-10 border border-white/5 min-h-[400px] shadow-2xl">
+                        <div id="initial-message"
+                            class="text-center flex flex-col items-center justify-center h-full space-y-6">
+                            <div
+                                class="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+                                <i class="fas fa-hand-pointer text-3xl text-primary"></i>
+                            </div>
+                            <h3 class="text-3xl font-display font-black uppercase">Interactive Suite</h3>
+                            <p class="text-gray-500 max-w-xs leading-relaxed">Click on any glowing focal point to unlock
+                                procedure-specific anatomical care instructions.</p>
+                        </div>
+
+                        <div id="guide-content" class="hidden animate-fadeIn">
+                            <div class="flex items-center justify-between mb-8 pb-8 border-b border-white/10">
+                                <h2 id="guide-title" class="text-4xl font-display font-black text-primary uppercase">Ear
+                                    Piercing</h2>
+                                <span id="guide-time"
+                                    class="text-xs uppercase font-black bg-primary/20 text-primary px-5 py-2 rounded-full tracking-widest">Healing:
+                                    6-12 Months</span>
+                            </div>
+
+                            <div class="space-y-8">
+                                <div>
+                                    <h4 class="text-[10px] uppercase font-black tracking-[0.3em] text-gray-500 mb-6">
+                                        Aseptic Routine</h4>
+                                    <ul id="guide-instructions" class="space-y-5">
+                                        <!-- Instructions -->
+                                    </ul>
+                                </div>
+                                <div class="p-8 bg-red-500/5 border border-red-500/20 rounded-3xl">
+                                    <h4 class="text-xs uppercase font-black text-red-500 mb-4 flex items-center">
+                                        <i class="fas fa-biohazard mr-2"></i> Clinical Red Flags
+                                    </h4>
+                                    <ul id="guide-red-flags" class="text-sm text-gray-400 space-y-2">
+                                        <!-- Red Flags -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Healing Timeline -->
+                    <div class="bg-neutral-900 border border-white/5 rounded-[40px] p-10 shadow-2xl">
+                        <h3 class="text-2xl font-display font-black mb-10 uppercase tracking-tight">Biological Timeline
+                        </h3>
+                        <div
+                            class="relative space-y-12 before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[1px] before:bg-white/10">
+                            <div class="pl-12 relative flex items-start group">
+                                <div
+                                    class="absolute left-0 w-8 h-8 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                                    <span class="text-[10px] font-black">01</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1 uppercase tracking-tighter">Days 1-14: Acute
+                                        Healing</h4>
+                                    <p class="text-xs text-primary/70 uppercase font-black mb-2">Inflammatory Response
+                                    </p>
+                                    <p class="text-sm text-gray-500 leading-relaxed">Your body is creating a 'fistula'—a
+                                        tunnel of skin. Expect localized heat, minor bleeding, and transparent
+                                        discharge. Leave it alone: movement at this stage can cause traumatic scabbing.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pl-12 relative flex items-start group">
+                                <div
+                                    class="absolute left-0 w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all">
+                                    <span class="text-[10px] font-black">02</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1 uppercase tracking-tighter">Weeks 4-16:
+                                        Proliferation</h4>
+                                    <p class="text-xs text-secondary/70 uppercase font-black mb-2">Tissue Reconstruction
+                                    </p>
+                                    <p class="text-sm text-gray-500 leading-relaxed">The internal walls of the piercing
+                                        are thickening. It may look and feel 'normal,' but it is incredibly fragile.
+                                        This is the danger zone for abandonment: keep cleaning twice daily.</p>
+                                </div>
+                            </div>
+                            <div class="pl-12 relative flex items-start group">
+                                <div
+                                    class="absolute left-0 w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all">
+                                    <span class="text-[10px] font-black">03</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1 uppercase tracking-tighter">Months 6-12:
+                                        Maturation</h4>
+                                    <p class="text-xs text-accent/70 uppercase font-black mb-2">Scar Stabilization</p>
+                                    <p class="text-sm text-gray-500 leading-relaxed">The fistula has fully matured into
+                                        a permanent channel. You can now transition to seasonal jewelry and rings. We
+                                        still recommend professional help for your first jewelry flip.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jewelry Maintenance Section -->
+            <section class="mb-32">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="text-4xl font-display font-black mb-6 uppercase">INVESTMENT <span
+                            class="text-secondary">PRESERVATION</span></h2>
+                    <p class="text-gray-500 text-lg leading-relaxed">High-end body jewelry from Ethereal Ink is designed
+                        to last a lifetime, but it requires specific care to maintain its biocompatibility and luster.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="p-10 bg-white/5 rounded-[40px] border border-white/5 hover:border-primary/20 transition-all">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-8">
+                            <i class="fas fa-soap text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 uppercase">Sterile Cleaning</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                            For gold and titanium pieces, use only pH-balanced, fragrance-free soaps. Avoid ultrasonic
+                            cleaners for organic stones like Opals, as the vibrations can fracture the gemstone
+                            structure.
+                        </p>
+                        <ul class="text-xs space-y-2 text-gray-600">
+                            <li><i class="fas fa-times mr-2 text-red-500"></i> No Alcohol</li>
+                            <li><i class="fas fa-times mr-2 text-red-500"></i> No Peroxide</li>
+                            <li><i class="fas fa-check mr-2 text-green-500"></i> Saline Soak Ready</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="p-10 bg-white/5 rounded-[40px] border border-white/5 hover:border-secondary/20 transition-all">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary mb-8">
+                            <i class="fas fa-tools text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 uppercase">Mechanical Checks</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                            "Check your ends." Threaded and threadless jewelry can gradually loosen with movement. We
+                            recommend checking the tightness of your jewelry ends once a week with clean hands.
+                        </p>
+                        <ul class="text-xs space-y-2 text-gray-600">
+                            <li><i class="fas fa-sync mr-2 text-secondary"></i> Righty-Tighty</li>
+                            <li><i class="fas fa-hand-sparkles mr-2 text-secondary"></i> Wash Hands First</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="p-10 bg-white/5 rounded-[40px] border border-white/5 hover:border-accent/20 transition-all">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-8">
+                            <i class="fas fa-box-open text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 uppercase">Safe Storage</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                            When not in use, store your pieces in individual, soft-lined compartments. Gold is a soft
+                            metal and can easily be scratched by Titanium or harder gemstones if stored together.
+                        </p>
+                        <ul class="text-xs space-y-2 text-gray-600">
+                            <li><i class="fas fa-shield-alt mr-2 text-accent"></i> Scratch Protection</li>
+                            <li><i class="fas fa-tint-slash mr-2 text-accent"></i> Dry Environment</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Symptom Checker CTA -->
+            <div
+                class="bg-gradient-to-br from-dark to-primary/10 rounded-[4rem] p-16 border border-white/5 flex flex-col lg:flex-row items-center justify-between shadow-2xl relative overflow-hidden">
+                <div class="relative z-10 mb-12 lg:mb-0">
+                    <h3 class="text-4xl md:text-5xl font-display font-black mb-6 uppercase tracking-tighter">CLINICAL
+                        <span class="text-accent underline decoration-primary underline-offset-8">ASSESSMENT</span></h3>
+                    <p class="text-gray-400 max-w-xl text-lg leading-relaxed">
+                        Unsure if your healing is on track? Use our digital diagnostic tool to analyze symptoms or
+                        schedule a physical check-up with an artist.
+                    </p>
+                </div>
+                <div class="relative z-10 flex flex-col sm:flex-row gap-6 w-full lg:w-auto">
+                    <a href="login.html"
+                        class="px-12 py-5 bg-white text-dark font-black rounded-2xl hover:bg-primary hover:text-white transition-all text-center uppercase tracking-widest text-sm">Open
+                        Diagnostics</a>
+                    <a href="contact.html"
+                        class="px-12 py-5 border border-white/20 rounded-2xl font-black hover:bg-white/10 transition-all text-center uppercase tracking-widest text-sm">Emergency
+                        Support</a>
+                </div>
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/20 blur-[100px]"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/body-diagram.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Artists | Ethereal Ink Studio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#7c3aed', dark: '#0f0f0f' } } } }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-mode">
+
+    <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-needle text-primary text-2xl rotate-45"></i>
+                <span class="text-2xl font-display font-extrabold tracking-tighter text-white">ETHEREAL<span
+                        class="text-primary">INK</span></span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html" class="text-sm font-semibold hover:text-primary transition-colors">Home</a>
+                <a href="index-v2.html" class="text-sm font-semibold hover:text-primary transition-colors">Home 2</a>
+                <a href="services.html" class="text-sm font-semibold hover:text-primary transition-colors">Services</a>
+                <a href="jewelry-catalog.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Jewelry</a>
+                <a href="artists.html" class="text-sm font-semibold text-primary">Artists</a>
+                <a href="aftercare-guide.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Aftercare</a>
+                <a href="gallery.html" class="text-sm font-semibold hover:text-primary transition-colors">Gallery</a>
+                <a href="dashboard.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors">Dashboard</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle RTL/LTR">
+                    <i class="fas fa-align-right"></i>
+                </button>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle Theme">
+                    <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
+                    <i id="theme-icon-light" class="fas fa-sun"></i>
+                </button>
+                <a href="booking.html" class="btn-primary">Book Now</a>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-dark border-b border-white/10 flex-col p-6 space-y-4 animate-fadeIn">
+            <a href="index.html" class="text-lg font-semibold">Home</a>
+            <a href="index-v2.html" class="text-lg font-semibold">Home 2</a>
+            <a href="services.html" class="text-lg font-semibold">Services</a>
+            <a href="jewelry-catalog.html" class="text-lg font-semibold">Jewelry</a>
+            <a href="artists.html" class="text-lg font-semibold">Artists</a>
+            <a href="aftercare-guide.html" class="text-lg font-semibold">Aftercare</a>
+            <a href="gallery.html" class="text-lg font-semibold">Gallery</a>
+            <a href="dashboard.html" class="text-lg font-semibold">Dashboard</a>
+            <a href="booking.html" class="btn-primary inline-block text-center">Book Appointment</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24">
+                <h1 class="text-6xl md:text-8xl font-display font-extrabold mb-6 uppercase tracking-tighter">THE
+                    <br><span class="text-primary neon-text-purple">COLLECTIVE</span></h1>
+                <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+                    Our studio is home to some of the industry's most dedicated professionals. Each of our artists is
+                    APP-certified and undergoes continuous training in aseptic techniques, anatomical mapping, and
+                    jewelry curation.
+                </p>
+            </div>
+
+            <div class="space-y-32">
+                <!-- Artist 1: Jax Sterling -->
+                <section class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="lg:w-1/2 group">
+                        <div class="relative overflow-hidden rounded-[50px] aspect-[4/5] shadow-2xl">
+                            <img src="https://i.pravatar.cc/800?img=68" alt="Jax Sterling"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex flex-col justify-end p-12">
+                                <div class="flex space-x-4">
+                                    <a href="#"
+                                        class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-primary transition-all"><i
+                                            class="fab fa-instagram text-xl"></i></a>
+                                    <a href="#"
+                                        class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-primary transition-all"><i
+                                            class="fas fa-camera text-xl"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="mb-4">
+                            <span class="text-xs font-black text-primary uppercase tracking-[0.3em]">Senior
+                                Piercer</span>
+                            <h2 class="text-5xl font-display font-black uppercase mt-2">Jax Sterling</h2>
+                        </div>
+                        <div class="space-y-6 text-gray-400 leading-relaxed mb-10">
+                            <p>
+                                With over a decade of experience in high-end modification, Jax is our lead curation
+                                specialist. His approach to body art is clinical in its precision but poetic in its
+                                execution. Jax specializes in "ear architecture," a method he developed that treats the
+                                ear as a multi-dimensional space for bespoke jewelry projects.
+                            </p>
+                            <p>
+                                After studying aseptic nursing protocols, Jax transitioned into the piercing industry
+                                with a mission to eliminate the "living room shop" mentality. He has been a featured
+                                speaker at the Association of Professional Piercers (APP) conference and has consulted
+                                for major jewelry manufacturers on biocompatible alloy development.
+                            </p>
+                            <blockquote class="border-l-4 border-primary pl-6 italic text-white text-xl">
+                                "My goal is to find the hidden geometry within your anatomy and accentuate it with the
+                                world's finest metals."
+                            </blockquote>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8 mb-10">
+                            <div>
+                                <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Specialties</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>Ear Curation</li>
+                                    <li>Industrial Scaffolding</li>
+                                    <li>Anatomical Mapping</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Awards</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>APP Safety Award 2024</li>
+                                    <li>Vibrant City Artist of Year</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="booking.html"
+                            class="inline-block bg-primary text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-dark transition-all">Book
+                            with Jax</a>
+                    </div>
+                </section>
+
+                <!-- Artist 2: Luna Vane -->
+                <section class="flex flex-col lg:flex-row-reverse gap-16 items-center">
+                    <div class="lg:w-1/2 group">
+                        <div class="relative overflow-hidden rounded-[50px] aspect-[4/5] shadow-2xl">
+                            <img src="https://i.pravatar.cc/800?img=44" alt="Luna Vane"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex flex-col justify-end p-12">
+                                <div class="flex space-x-4">
+                                    <a href="#"
+                                        class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-secondary transition-all"><i
+                                            class="fab fa-instagram text-xl"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="mb-4">
+                            <span class="text-xs font-black text-secondary uppercase tracking-[0.3em]">Facial
+                                Specialist</span>
+                            <h2 class="text-5xl font-display font-black uppercase mt-2">Luna Vane</h2>
+                        </div>
+                        <div class="space-y-6 text-gray-400 leading-relaxed mb-10">
+                            <p>
+                                Luna is widely considered the valley's foremost expert in facial symmetry. Her work
+                                balances the edgy nature of body modification with a sophisticated, minimalist
+                                aesthetic. She believes that a facial piercing should never "interrupt" a face, but
+                                rather serve as a focal point that brings out the wearer's natural beauty.
+                            </p>
+                            <p>
+                                Before joining Ethereal Ink, Luna worked in the high-fashion industry as an editorial
+                                stylist. This unique background allows her to offer unparalleled jewelry matching
+                                services, helping clients select stones and metals that complement their skin tone and
+                                personal style.
+                            </p>
+                            <blockquote class="border-l-4 border-secondary pl-6 italic text-white text-xl">
+                                "Symmetry is an illusion. My job is to create the perfect visual balance that feels
+                                natural to your movements."
+                            </blockquote>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8 mb-10">
+                            <div>
+                                <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Specialties</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>Septum Precision</li>
+                                    <li>Paired Nostrils</li>
+                                    <li>Jewelry Styling</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Experience</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>6+ Years Clinical Exp.</li>
+                                    <li>Advanced Anatomy Cert.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="booking.html"
+                            class="inline-block bg-secondary text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-dark transition-all shadow-lg shadow-secondary/20">Book
+                            with Luna</a>
+                    </div>
+                </section>
+
+                <!-- Artist 3: Mika Thorne -->
+                <section class="flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="lg:w-1/2 group">
+                        <div class="relative overflow-hidden rounded-[50px] aspect-[4/5] shadow-2xl">
+                            <img src="https://i.pravatar.cc/800?img=33" alt="Mika Thorne"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent flex flex-col justify-end p-12">
+                                <div class="flex space-x-4">
+                                    <a href="#"
+                                        class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-accent transition-all"><i
+                                            class="fab fa-instagram text-xl"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="mb-4">
+                            <span class="text-xs font-black text-accent uppercase tracking-[0.3em]">Surface
+                                Master</span>
+                            <h2 class="text-5xl font-display font-black uppercase mt-2">Mika Thorne</h2>
+                        </div>
+                        <div class="space-y-6 text-gray-400 leading-relaxed mb-10">
+                            <p>
+                                Mika is our go-to expert for unconventional body placements. Her technical mastery of
+                                dermal anchors and surface bars has earned her a reputation among the city's alternative
+                                community. With a background in mechanical engineering, she understands the physical
+                                forces—tension, compression, and torque—that act on jewelry in the skin.
+                            </p>
+                            <p>
+                                Mika is also our lead aftercare researcher. She manages our ongoing clinical study on
+                                the efficacy of various wound-care solutions, ensuring that Ethereal Ink always stays at
+                                the cutting edge of healing technology. If you have a difficult piercing that won't
+                                settle, Mika is the "fixer" you need.
+                            </p>
+                            <blockquote class="border-l-4 border-accent pl-6 italic text-white text-xl">
+                                "The body is a machine that wants to heal. I just provide the perfect environment for it
+                                to do so."
+                            </blockquote>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8 mb-10">
+                            <div>
+                                <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Specialties</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>Dermal Anchors</li>
+                                    <li>Surface Bars</li>
+                                    <li>Migration Repair</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Experience</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>12+ Years Industry Exp.</li>
+                                    <li>Licensed Body Modifier</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="booking.html"
+                            class="inline-block bg-accent text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-dark transition-all shadow-lg shadow-accent/20">Book
+                            with Mika</a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Guest Program -->
+            <section class="mt-32 p-16 bg-neutral-900/50 rounded-[60px] border border-white/5 text-center">
+                <h2 class="text-4xl font-display font-black mb-8 uppercase">GUEST ARTIST <span
+                        class="text-primary">PROGRAM</span></h2>
+                <p class="text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
+                    Ethereal Ink frequently hosts guest artists from across the globe. We believe in the
+                    cross-pollination of techniques and styles. Want to know when your favorite world-class piercer is
+                    visiting? Join our collective newsletter.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="register.html"
+                        class="bg-white text-dark px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all">Join
+                        Mailing List</a>
+                    <a href="contact.html"
+                        class="border border-white/20 px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:border-primary transition-all">Artist
+                        Residencies</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
