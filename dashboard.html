@@ -22,7 +22,7 @@
     <div class="flex min-h-screen">
         <!-- Sidebar -->
         <aside id="sidebar"
-            class="w-64 bg-zinc-900 border-r border-white/5 flex flex-col fixed h-full z-40 transition-transform lg:translate-x-0 -translate-x-full">
+            class="w-64 bg-zinc-900 border-r border-white/5 flex flex-col fixed h-full z-40 transition-transform xl:translate-x-0 -translate-x-full">
             <div class="p-8">
                 <a href="index.html" class="flex items-center space-x-2">
                     <i class="fas fa-needle text-primary text-xl rotate-45"></i>
@@ -70,23 +70,23 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 lg:ml-64">
+        <main class="flex-1 xl:ml-64">
             <!-- Standardized Header -->
             <header
-                class="fixed lg:w-[calc(100%-16rem)] w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
-                <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-                    <div class="flex items-center space-x-4">
-                        <button class="lg:hidden text-2xl" id="toggle-sidebar-mobile"><i
+                class="fixed xl:w-[calc(100%-16rem)] w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+                <nav class="w-full px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-3">
+                    <div class="flex items-center space-x-3 min-w-0">
+                        <button class="xl:hidden text-2xl" id="toggle-sidebar-mobile"><i
                                 class="fas fa-bars"></i></button>
-                        <a href="index.html" class="lg:hidden flex items-center space-x-2">
+                        <a href="index.html" class="xl:hidden flex items-center space-x-2 min-w-0">
                             <i class="fas fa-needle text-primary text-xl rotate-45"></i>
-                            <span class="text-xl font-[Montserrat] font-black tracking-tighter">ETHEREAL<span
+                            <span class="text-lg sm:text-xl font-[Montserrat] font-black tracking-tighter whitespace-nowrap">ETHEREAL<span
                                     class="text-primary">INK</span></span>
                         </a>
                     </div>
 
                     <!-- Desktop Navigation (Simplified for Dashboard) -->
-                    <div class="hidden lg:flex items-center space-x-8">
+                    <div class="hidden xl:flex items-center space-x-8">
                         <a href="index.html"
                             class="text-xs font-black uppercase tracking-widest hover:text-primary transition-all">Home</a>
                         <a href="services.html"
@@ -95,9 +95,14 @@
                             class="text-xs font-black uppercase tracking-widest hover:text-primary transition-all">Catalog</a>
                         <a href="booking.html" class="text-xs font-black uppercase tracking-widest text-primary">New
                             Booking</a>
+                        <a href="login.html"
+                            class="text-xs font-black uppercase tracking-widest hover:text-primary transition-all">Login</a>
+                        <a href="register.html"
+                            class="text-xs font-black uppercase tracking-widest hover:text-primary transition-all">Sign
+                            Up</a>
                     </div>
 
-                    <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2 sm:space-x-4 shrink-0">
                         <div class="relative group">
                             <button class="p-2 rounded-full hover:bg-white/10 transition-colors relative">
                                 <i class="fas fa-bell"></i>
@@ -106,11 +111,16 @@
                             </button>
                             <!-- Notification Dropdown -->
                         </div>
+                        <button id="theme-toggle" class="hidden sm:inline-flex p-2 rounded-full hover:bg-white/10 transition-colors"
+                            title="Toggle Theme">
+                            <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
+                            <i id="theme-icon-light" class="fas fa-sun"></i>
+                        </button>
                         <div
-                            class="flex items-center space-x-3 ml-4 bg-white/5 py-2 px-4 rounded-full border border-white/5">
+                            class="flex items-center space-x-2 sm:space-x-3 ml-0 sm:ml-2 bg-white/5 py-2 px-2 sm:px-4 rounded-full border border-white/5 min-w-0">
                             <img src="https://i.pravatar.cc/100?img=12"
                                 class="w-6 h-6 rounded-full border border-primary/50">
-                            <span class="text-xs font-black uppercase tracking-tighter">Alex Carter</span>
+                            <span class="hidden sm:inline text-xs font-black uppercase tracking-tighter whitespace-nowrap">Alex Carter</span>
                         </div>
                     </div>
                 </nav>
@@ -118,11 +128,11 @@
 
             <!-- Dashboard Content -->
             <div class="p-8 pt-24 lg:p-12 lg:pt-32">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+                <div class="flex flex-col items-center text-center mb-12 gap-6">
                     <div>
                         <h1 class="text-5xl font-[Montserrat] font-black mb-4 uppercase tracking-tighter">THE <span
                                 class="text-primary">PORTAL</span></h1>
-                        <p class="text-gray-500 text-lg">Your biological journey. Tracked, measured, and curated.</p>
+                        <p class="text-gray-300 text-lg">Your biological journey. Tracked, measured, and curated.</p>
                     </div>
                     <div class="flex gap-4">
                         <button
@@ -214,7 +224,7 @@
                                         </div>
                                     </div>
                                     <a href="aftercare-guide.html"
-                                        class="block w-full text-center py-4 bg-white/5 hover:bg-white text-dark group-hover:bg-primary group-hover:text-white rounded-2xl transition-all text-[10px] font-black uppercase tracking-widest">
+                                        class="block w-full text-center py-4 bg-white/10 hover:bg-white text-white hover:text-dark rounded-2xl transition-all text-[10px] font-black uppercase tracking-widest">
                                         Update Healing Log
                                     </a>
                                 </div>
@@ -247,7 +257,7 @@
                                         </div>
                                     </div>
                                     <a href="booking.html"
-                                        class="block w-full text-center py-4 bg-white/5 hover:bg-white text-dark group-hover:bg-accent group-hover:text-white rounded-2xl transition-all text-[10px] font-black uppercase tracking-widest">
+                                        class="block w-full text-center py-4 bg-white/10 hover:bg-white text-white hover:text-dark rounded-2xl transition-all text-[10px] font-black uppercase tracking-widest">
                                         Book Downsize
                                     </a>
                                 </div>
@@ -257,7 +267,8 @@
                         <!-- Collective Activity / Community Feed -->
                         <section
                             class="bg-zinc-900/50 p-10 rounded-[3.5rem] border border-white/5 relative overflow-hidden">
-                            <h2 class="text-2xl font-black mb-8 uppercase tracking-tight flex items-center">
+                            <h2
+                                class="text-2xl font-black mb-8 uppercase tracking-tight flex items-center justify-center text-center">
                                 <i class="fas fa-users text-secondary mr-4"></i> THE COLLECTIVE FEED
                             </h2>
                             <div class="space-y-8 relative z-10">
@@ -268,27 +279,25 @@
                                         <p class="text-sm font-bold text-white mb-2">Jax Sterling <span
                                                 class="text-gray-600 text-[10px] uppercase font-black ml-2">• 1 Hour
                                                 Ago</span></p>
-                                        <p class="text-sm text-gray-500 leading-relaxed">"Just received a shipment of
+                                        <p class="text-sm text-gray-300 leading-relaxed">"Just received a shipment of
                                             genuine Australian Opals for the upcoming Gold Capsule drop. First-look
                                             priority for our Gold Tier members starts tomorrow."</p>
                                         <div class="flex gap-4 mt-4">
                                             <button class="text-[10px] font-black text-primary uppercase">Reserve
                                                 Slot</button>
-                                            <button class="text-[10px] font-black text-gray-600 uppercase">View
+                                            <button class="text-[10px] font-black text-gray-300 uppercase">View
                                                 Items</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="flex gap-6 items-start">
-                                    <div
-                                        class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center shrink-0">
-                                        <i class="fas fa-calendar-star text-secondary"></i>
-                                    </div>
+                                    <img src="https://i.pravatar.cc/100?img=32"
+                                        class="w-12 h-12 rounded-2xl shrink-0 grayscale hover:grayscale-0 transition-all cursor-pointer">
                                     <div>
                                         <p class="text-sm font-bold text-white mb-2">Event Announcement <span
                                                 class="text-gray-600 text-[10px] uppercase font-black ml-2">• 6 Hours
                                                 Ago</span></p>
-                                        <p class="text-sm text-gray-500 leading-relaxed">Guest artist residency
+                                        <p class="text-sm text-gray-300 leading-relaxed">Guest artist residency
                                             confirmed: **Marcus Vane (London)** will be in-studio Feb 20-25. Booking
                                             opens for Silver+ members at midnight.</p>
                                     </div>
@@ -334,7 +343,7 @@
                                     </div>
                                 </div>
                                 <a href="jewelry-catalog.html"
-                                    class="block text-center py-6 border border-dashed border-white/10 rounded-[2rem] text-[10px] font-black text-gray-600 uppercase tracking-widest hover:border-primary hover:text-white transition-all">
+                                    class="block text-center py-6 border border-dashed border-white/10 rounded-[2rem] text-[10px] font-black text-gray-300 uppercase tracking-widest hover:border-primary hover:text-white transition-all">
                                     Discover More Craft
                                 </a>
                             </div>
@@ -391,16 +400,23 @@
         </main>
     </div>
 
+    <script src="js/main.js"></script>
     <script>
         // Sidebar Toggle for Mobile
         const sidebar = document.getElementById('sidebar');
-        const toggleBtn = document.getElementById('toggle-sidebar');
+        const toggleBtn = document.getElementById('toggle-sidebar-mobile');
         if (toggleBtn) {
             toggleBtn.addEventListener('click', () => {
                 sidebar.classList.toggle('-translate-x-full');
             });
         }
     </script>
+
+    <footer class="bg-black border-t border-white/10 py-12 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 Ethereal Ink &amp; Piercing Studio. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

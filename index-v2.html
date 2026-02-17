@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="dark">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -31,15 +31,62 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Home 2: ensure theme toggle has visible effect in light mode */
+        body.home-v2.light-mode {
+            background-color: #f8fafc;
+            color: #111827;
+        }
+
+        body.home-v2.light-mode header {
+            background-color: rgba(255, 255, 255, 0.92) !important;
+            color: #111827;
+        }
+
+        body.home-v2.light-mode #mobile-menu {
+            background-color: #ffffff !important;
+            color: #111827;
+        }
+
+        body.home-v2.light-mode .bg-dark,
+        body.home-v2.light-mode .bg-black,
+        body.home-v2.light-mode .bg-neutral-950,
+        body.home-v2.light-mode .bg-neutral-900\/30,
+        body.home-v2.light-mode .bg-neutral-900\/10,
+        body.home-v2.light-mode .bg-zinc-900 {
+            background-color: #ffffff !important;
+        }
+
+        body.home-v2.light-mode .text-white,
+        body.home-v2.light-mode .text-gray-100 {
+            color: #111827 !important;
+        }
+
+        body.home-v2.light-mode .text-gray-400,
+        body.home-v2.light-mode .text-gray-500,
+        body.home-v2.light-mode .text-gray-600 {
+            color: #4b5563 !important;
+        }
+
+        body.home-v2.light-mode .border-white\/20,
+        body.home-v2.light-mode .border-white\/10,
+        body.home-v2.light-mode .border-white\/5 {
+            border-color: rgba(17, 24, 39, 0.14) !important;
+        }
+
+        body.home-v2.light-mode .from-dark {
+            --tw-gradient-from: #f8fafc var(--tw-gradient-from-position) !important;
+        }
+    </style>
 </head>
 
-<body class="dark-mode bg-dark text-gray-100 overflow-x-hidden">
+<body class="dark-mode home-v2 overflow-x-hidden">
 
     <!-- Standardized Header -->
     <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
-        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+        <nav class="w-full px-4 md:px-6 xl:px-10 py-4 flex items-center">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center space-x-2">
+            <a href="index.html" class="flex items-center space-x-2 shrink-0">
                 <i class="fas fa-needle text-primary text-2xl rotate-45"></i>
                 <span class="text-2xl font-display font-extrabold tracking-tighter text-white">
                     ETHEREAL<span class="text-primary">INK</span>
@@ -47,22 +94,27 @@
             </a>
 
             <!-- Desktop Navigation -->
-            <div class="hidden lg:flex items-center space-x-8">
-                <a href="index.html" class="text-sm font-semibold hover:text-primary transition-colors">Home</a>
-                <a href="index-v2.html" class="text-sm font-semibold hover:text-primary transition-colors">Home 2</a>
-                <a href="services.html" class="text-sm font-semibold hover:text-primary transition-colors">Services</a>
+            <div class="hidden lg:flex items-center gap-6 ml-12 shrink-0">
+                <a href="index.html" class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Home</a>
+                <a href="index-v2.html"
+                    class="text-sm font-semibold text-primary border-b-2 border-primary pb-1 transition-colors whitespace-nowrap"
+                    aria-current="page">Home 2</a>
+                <a href="services.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Services</a>
                 <a href="jewelry-catalog.html"
-                    class="text-sm font-semibold hover:text-primary transition-colors">Jewelry</a>
-                <a href="artists.html" class="text-sm font-semibold hover:text-primary transition-colors">Artists</a>
+                    class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Jewelry</a>
+                <a href="artists.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Artists</a>
                 <a href="aftercare-guide.html"
-                    class="text-sm font-semibold hover:text-primary transition-colors">Aftercare</a>
-                <a href="gallery.html" class="text-sm font-semibold hover:text-primary transition-colors">Gallery</a>
+                    class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Aftercare</a>
+                <a href="gallery.html"
+                    class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Gallery</a>
                 <a href="dashboard.html"
-                    class="text-sm font-semibold hover:text-primary transition-colors">Dashboard</a>
+                    class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Dashboard</a>
             </div>
 
             <!-- Header Actions -->
-            <div class="flex items-center space-x-4">
+            <div class="ml-auto flex items-center space-x-4 shrink-0">
                 <button id="rtl-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
                     title="Toggle RTL/LTR">
                     <i class="fas fa-align-right"></i>
@@ -72,9 +124,12 @@
                     <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
                     <i id="theme-icon-light" class="fas fa-sun"></i>
                 </button>
-                <a href="booking.html" class="btn-primary hidden md:inline-block">Book Now</a>
-                <a href="login.html" class="text-sm font-semibold hover:text-primary transition-colors"><i
-                        class="fas fa-user-circle text-xl align-middle mr-1"></i>Portal</a>
+                <a href="login.html"
+                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Login</a>
+                <a href="register.html"
+                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Sign
+                    Up</a>
+                <a href="booking.html" class="btn-primary hidden md:inline-block whitespace-nowrap">Book Now</a>
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="lg:hidden p-2 text-2xl">
@@ -87,23 +142,27 @@
         <div id="mobile-menu"
             class="hidden absolute top-full left-0 w-full bg-dark border-b border-white/10 flex-col p-6 space-y-4 animate-fadeIn">
             <a href="index.html" class="text-lg font-semibold">Home</a>
-            <a href="index-v2.html" class="text-lg font-semibold">Home 2</a>
+            <a href="index-v2.html" class="text-lg font-semibold text-primary" aria-current="page">Home 2</a>
             <a href="services.html" class="text-lg font-semibold">Services</a>
             <a href="jewelry-catalog.html" class="text-lg font-semibold">Jewelry</a>
             <a href="artists.html" class="text-lg font-semibold">Artists</a>
             <a href="aftercare-guide.html" class="text-lg font-semibold">Aftercare</a>
             <a href="gallery.html" class="text-lg font-semibold">Gallery</a>
             <a href="dashboard.html" class="text-lg font-semibold">Dashboard</a>
+            <a href="login.html" class="text-lg font-semibold">Login</a>
+            <a href="register.html" class="text-lg font-semibold">Sign Up</a>
             <a href="booking.html" class="btn-primary inline-block text-center">Book Appointment</a>
         </div>
     </header>
 
-    <main class="">
+    <main class="pt-20 md:pt-24 lg:pt-0">
         <!-- Split Screen Hero -->
         <section class="flex flex-col lg:flex-row min-h-screen">
             <!-- Left Side: Artist Video/Visual -->
             <div class="lg:w-1/2 relative overflow-hidden group">
-                <img src="https://images.unsplash.com/photo-1598371611480-5c3fda62edc3?w=1200" alt="Artist at work"
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80"
+                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590247813693-5541d1c609fd?auto=format&fit=crop&w=1200&q=80';"
+                    alt="Artist at work"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[0.5] group-hover:grayscale-0">
                 <div
                     class="absolute inset-0 bg-gradient-to-r from-dark flex items-center justify-center pointer-events-none">
@@ -116,9 +175,9 @@
             </div>
 
             <!-- Right Side: Interaction -->
-            <div class="lg:w-1/2 bg-dark p-12 lg:p-24 flex flex-col justify-center border-l border-white/5">
+            <div class="lg:w-1/2 bg-dark p-8 sm:p-10 lg:p-24 flex flex-col justify-center border-l border-white/5">
                 <h1
-                    class="text-7xl lg:text-9xl font-display font-black mb-6 leading-none neon-text-purple tracking-tighter">
+                    class="text-4xl sm:text-5xl lg:text-7xl font-display font-black mb-6 leading-tight neon-text-purple tracking-tighter">
                     NEON<br><span class="text-secondary neon-text-pink">PRECISION</span></h1>
                 <p class="text-xl text-gray-400 mb-12 max-w-lg leading-relaxed">
                     Where clinical hygiene meets high-concept art. Experience a new era of body modification powered by
@@ -146,7 +205,7 @@
                     <a href="aftercare-guide.html" class="absolute inset-0 z-20" title="Explore Piercing Locations"></a>
                 </div>
 
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                     <a href="booking.html"
                         class="px-10 py-5 bg-primary text-white font-black uppercase tracking-tighter hover:bg-white hover:text-dark transition-all transform -skew-x-12 text-center shadow-lg shadow-primary/20">
                         Book Session
@@ -175,8 +234,8 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    <div class="space-y-6">
-                        <span class="text-6xl font-display font-black text-primary/20">01</span>
+                    <div class="space-y-6 text-center">
+                        <span class="block text-6xl font-display font-black text-primary/50">01</span>
                         <h4 class="text-2xl font-bold uppercase tracking-tight">Anatomical Harmony</h4>
                         <p class="text-gray-500 leading-relaxed">
                             Every body is unique. We don't believe in "standard" placements. Our artists perform
@@ -184,8 +243,8 @@
                             natural contours.
                         </p>
                     </div>
-                    <div class="space-y-6">
-                        <span class="text-6xl font-display font-black text-secondary/20">02</span>
+                    <div class="space-y-6 text-center">
+                        <span class="block text-6xl font-display font-black text-secondary/50">02</span>
                         <h4 class="text-2xl font-bold uppercase tracking-tight">Technical Purity</h4>
                         <p class="text-gray-500 leading-relaxed">
                             Our studio operates at the intersection of a gallery and an operating room. We utilize
@@ -193,8 +252,8 @@
                             procedure.
                         </p>
                     </div>
-                    <div class="space-y-6">
-                        <span class="text-6xl font-display font-black text-accent/20">03</span>
+                    <div class="space-y-6 text-center">
+                        <span class="block text-6xl font-display font-black text-accent/50">03</span>
                         <h4 class="text-2xl font-bold uppercase tracking-tight">Curation Strategy</h4>
                         <p class="text-gray-500 leading-relaxed">
                             We don't just pierce; we design. Our "Curated Project" sessions involve long-term planning
@@ -211,7 +270,7 @@
             <div class="container mx-auto px-12">
                 <div class="flex flex-col lg:flex-row gap-16 items-center">
                     <div class="lg:w-1/2">
-                        <h2 class="text-4xl md:text-5xl font-display font-black mb-12 uppercase">THE <span
+                        <h2 class="text-4xl md:text-5xl font-display font-black mb-12 uppercase text-center">THE <span
                                 class="text-primary">PROCESS</span></h2>
                         <div class="space-y-12">
                             <div class="flex gap-8 group">
@@ -240,7 +299,7 @@
                             <div class="flex gap-8 group">
                                 <div
                                     class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:border-accent transition-colors">
-                                    <i class="fas fa-needle text-accent"></i>
+                                    <i class="fas fa-syringe text-accent"></i>
                                 </div>
                                 <div>
                                     <h5 class="text-xl font-bold mb-2 uppercase">03. EXECUTION</h5>
@@ -324,7 +383,8 @@
                         </div>
                     </div>
                     <div class="group h-96 relative overflow-hidden rounded-2xl cursor-pointer">
-                        <img src="https://images.unsplash.com/photo-1629193512674-32537c3534d0?w=600"
+                        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=600&q=80"
+                            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80';"
                             class="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 flex flex-col justify-end p-6">
                             <span class="text-xs font-bold text-secondary mb-2 tracking-widest uppercase">LIMITED
@@ -382,6 +442,12 @@
 
 
     <script src="js/main.js"></script>
+
+    <footer class="bg-black border-t border-white/10 py-12 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 Ethereal Ink &amp; Piercing Studio. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

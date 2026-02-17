@@ -9,7 +9,14 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#7c3aed', dark: '#0f0f0f' } } } }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: '#7c3aed', secondary: '#ec4899', accent: '#06b6d4', dark: '#0f0f0f' }
+                }
+            }
+        }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;600&display=swap"
         rel="stylesheet">
@@ -49,6 +56,10 @@
                     <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
                     <i id="theme-icon-light" class="fas fa-sun"></i>
                 </button>
+                <a href="login.html"
+                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors">Login</a>
+                <a href="register.html"
+                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors">Sign Up</a>
                 <a href="booking.html" class="btn-primary">Book Now</a>
             </div>
         </nav>
@@ -64,6 +75,8 @@
             <a href="aftercare-guide.html" class="text-lg font-semibold">Aftercare</a>
             <a href="gallery.html" class="text-lg font-semibold">Gallery</a>
             <a href="dashboard.html" class="text-lg font-semibold">Dashboard</a>
+            <a href="login.html" class="text-lg font-semibold">Login</a>
+            <a href="register.html" class="text-lg font-semibold">Sign Up</a>
             <a href="booking.html" class="btn-primary inline-block text-center">Book Appointment</a>
         </div>
     </header>
@@ -101,7 +114,7 @@
                         </div>
                     </div>
                     <div class="lg:w-1/2">
-                        <div class="mb-4">
+                        <div class="mb-4 text-center">
                             <span class="text-xs font-black text-primary uppercase tracking-[0.3em]">Senior
                                 Piercer</span>
                             <h2 class="text-5xl font-display font-black uppercase mt-2">Jax Sterling</h2>
@@ -142,7 +155,7 @@
                             </div>
                         </div>
                         <a href="booking.html"
-                            class="inline-block bg-primary text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-dark transition-all">Book
+                            class="block w-fit mx-auto bg-primary text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-dark transition-all">Book
                             with Jax</a>
                     </div>
                 </section>
@@ -164,7 +177,7 @@
                         </div>
                     </div>
                     <div class="lg:w-1/2">
-                        <div class="mb-4">
+                        <div class="mb-4 text-center">
                             <span class="text-xs font-black text-secondary uppercase tracking-[0.3em]">Facial
                                 Specialist</span>
                             <h2 class="text-5xl font-display font-black uppercase mt-2">Luna Vane</h2>
@@ -205,7 +218,7 @@
                             </div>
                         </div>
                         <a href="booking.html"
-                            class="inline-block bg-secondary text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-dark transition-all shadow-lg shadow-secondary/20">Book
+                            class="block w-fit mx-auto bg-secondary text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-dark transition-all shadow-lg shadow-secondary/20">Book
                             with Luna</a>
                     </div>
                 </section>
@@ -227,7 +240,7 @@
                         </div>
                     </div>
                     <div class="lg:w-1/2">
-                        <div class="mb-4">
+                        <div class="mb-4 text-center">
                             <span class="text-xs font-black text-accent uppercase tracking-[0.3em]">Surface
                                 Master</span>
                             <h2 class="text-5xl font-display font-black uppercase mt-2">Mika Thorne</h2>
@@ -268,7 +281,7 @@
                             </div>
                         </div>
                         <a href="booking.html"
-                            class="inline-block bg-accent text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-dark transition-all shadow-lg shadow-accent/20">Book
+                            class="block w-fit mx-auto bg-accent text-white px-10 py-4 rounded-full font-black uppercase tracking-widest hover:bg-white hover:text-dark transition-all shadow-lg shadow-accent/20">Book
                             with Mika</a>
                     </div>
                 </section>
@@ -296,6 +309,12 @@
     </main>
 
     <script src="js/main.js"></script>
+
+    <footer class="bg-black border-t border-white/10 py-12 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 Ethereal Ink &amp; Piercing Studio. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

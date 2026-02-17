@@ -19,9 +19,9 @@
 
 <body class="dark-mode bg-dark text-white font-[Inter] overflow-x-hidden">
 
-    <div class="flex min-h-screen">
+    <div class="flex flex-col lg:flex-row min-h-screen">
         <!-- Feature Side -->
-        <div class="hidden lg:flex lg:w-1/2 bg-zinc-900 flex-col justify-center p-20 relative overflow-hidden">
+        <div class="w-full lg:w-1/2 bg-zinc-900 flex flex-col justify-center p-8 sm:p-12 lg:p-20 relative overflow-hidden">
             <div class="relative z-10 max-w-lg">
                 <a href="index.html" class="inline-flex items-center space-x-2 mb-16 group">
                     <i
@@ -30,7 +30,7 @@
                             class="text-primary">INK</span></span>
                 </a>
 
-                <h1 class="text-7xl font-display font-black uppercase tracking-tighter mb-8 leading-[0.9]">WELCOME
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-display font-black uppercase tracking-tighter mb-8 leading-[0.9]">WELCOME
                     <br><span class="text-primary italic">BACK</span> TO THE <br>COLLECTIVE</h1>
 
                 <p class="text-xl text-gray-400 mb-12 leading-relaxed">
@@ -38,7 +38,7 @@
                     manage your artistic collaborations.
                 </p>
 
-                <div class="grid grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                     <div class="p-6 bg-white/5 rounded-[2.5rem] border border-white/5">
                         <p class="text-xs font-black text-primary uppercase mb-2">Live Status</p>
                         <p class="text-lg font-bold">Clinical Environment Ready</p>
@@ -142,6 +142,12 @@
         </div>
     </div>
 
+
+    <footer class="bg-black border-t border-white/10 py-12 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 Ethereal Ink &amp; Piercing Studio. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
-</html>Helper functions and other code snippets.
+</html>
