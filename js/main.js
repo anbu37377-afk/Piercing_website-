@@ -74,9 +74,30 @@ function initMobileMenu() {
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (menuBtn && mobileMenu) {
+        menuBtn.setAttribute('aria-expanded', 'false');
+
+        const syncMenuState = () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            document.body.classList.toggle('menu-open', isOpen);
+            menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        };
+
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('flex');
+            syncMenuState();
         });
+
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    syncMenuState();
+                }
+            });
+        });
+
+        syncMenuState();
     }
 }

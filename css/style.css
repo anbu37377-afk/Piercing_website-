@@ -28,6 +28,28 @@
 @layer components {
   .btn-primary {
     @apply px-6 py-2 rounded-full bg-purple-600 text-white font-semibold hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/50;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    background-color: #7c3aed;
+    color: #ffffff !important;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.28);
+  }
+
+  .btn-primary:hover {
+    background-color: #6d28d9;
+    color: #ffffff !important;
+  }
+
+  /* Home header compact variant */
+  .btn-primary.nav-book-now-compact {
+    padding: 0.45rem 1.1rem;
+    font-size: 0.95rem;
+    line-height: 1;
+    white-space: nowrap;
+    box-shadow: 0 6px 16px rgba(124, 58, 237, 0.24);
   }
 
   .neon-border {
@@ -64,6 +86,295 @@
 [dir="rtl"] .ml-auto {
   margin-right: auto;
   margin-left: 0;
+}
+
+/* Keep shared fixed header readable in light theme */
+body.light-mode header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-bottom-color: rgba(17, 24, 39, 0.12) !important;
+  color: #111827 !important;
+}
+
+body.light-mode header .text-white,
+body.light-mode header a:not(.btn-primary):not(.text-primary):not(.nav-auth-btn),
+body.light-mode header button:not(.btn-primary),
+body.light-mode header #mobile-menu a:not(.btn-primary):not(.text-primary) {
+  color: #111827 !important;
+}
+
+body.light-mode header .border-white\/5,
+body.light-mode header .border-white\/10,
+body.light-mode header .border-white\/20 {
+  border-color: rgba(17, 24, 39, 0.12) !important;
+}
+
+body.light-mode header .hover\:bg-white\/10:hover {
+  background-color: rgba(17, 24, 39, 0.08) !important;
+}
+
+body.light-mode header #mobile-menu {
+  background-color: #ffffff !important;
+  border-bottom-color: rgba(17, 24, 39, 0.12) !important;
+  color: #111827 !important;
+}
+
+/* Header auth buttons (Login / Sign Up) */
+body header .nav-auth-btn {
+  height: 2.25rem;
+  padding: 0 0.95rem;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  transition: all 0.25s ease;
+}
+
+body header .nav-auth-login {
+  color: #e5e7eb;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+body header .nav-auth-login:hover {
+  color: #ffffff;
+  background-color: rgba(124, 58, 237, 0.14);
+  border-color: rgba(124, 58, 237, 0.55);
+}
+
+body header .nav-auth-signup {
+  color: #ffffff;
+  background-color: rgba(124, 58, 237, 0.24);
+  border-color: rgba(124, 58, 237, 0.58);
+}
+
+body header .nav-auth-signup:hover {
+  color: #ffffff;
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+}
+
+body.light-mode header .nav-auth-login {
+  color: #111827 !important;
+  background-color: rgba(17, 24, 39, 0.03);
+  border-color: rgba(17, 24, 39, 0.22);
+}
+
+body.light-mode header .nav-auth-login:hover {
+  color: #111827 !important;
+  background-color: rgba(124, 58, 237, 0.12);
+  border-color: rgba(124, 58, 237, 0.5);
+}
+
+body.light-mode header .nav-auth-signup {
+  color: #5b21b6 !important;
+  background-color: rgba(124, 58, 237, 0.12);
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+body.light-mode header .nav-auth-signup:hover {
+  color: #ffffff !important;
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+}
+
+/* Artists page readability in light theme */
+body.artists-page.light-mode main .text-gray-400 {
+  color: #4b5563 !important;
+}
+
+body.artists-page.light-mode main .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+body.artists-page.light-mode main blockquote.text-white,
+body.artists-page.light-mode main h4.text-white {
+  color: #111827 !important;
+}
+
+body.artists-page.light-mode .guest-program {
+  background-color: #f3f4f6 !important;
+  border-color: rgba(17, 24, 39, 0.12) !important;
+}
+
+body.artists-page.light-mode .guest-program .border-white\/20 {
+  border-color: rgba(17, 24, 39, 0.2) !important;
+}
+
+/* Aftercare CTA readability in light theme */
+body.aftercare-page.light-mode .assessment-cta {
+  background-image: linear-gradient(135deg, #e5e7eb, #ddd6fe) !important;
+  border-color: rgba(17, 24, 39, 0.12) !important;
+}
+
+body.aftercare-page.light-mode .assessment-cta h3 {
+  color: #111827 !important;
+}
+
+body.aftercare-page.light-mode .assessment-cta .text-gray-400 {
+  color: #374151 !important;
+}
+
+body.aftercare-page.light-mode .assessment-cta .border-white\/20 {
+  border-color: rgba(17, 24, 39, 0.2) !important;
+}
+
+body.aftercare-page.light-mode .assessment-cta a:last-child {
+  color: #111827 !important;
+}
+
+body.aftercare-page.light-mode .assessment-cta a:last-child:hover {
+  background-color: rgba(17, 24, 39, 0.08) !important;
+}
+
+/* Gallery page text readability in light theme */
+body.gallery-page.light-mode main .text-gray-400 {
+  color: #374151 !important;
+}
+
+body.gallery-page.light-mode main .text-gray-500 {
+  color: #4b5563 !important;
+}
+
+body.gallery-page.light-mode main .text-white\/50 {
+  color: rgba(17, 24, 39, 0.72) !important;
+}
+
+body.gallery-page.light-mode main .hover\:text-white:hover {
+  color: #111827 !important;
+}
+
+body.gallery-page.light-mode footer {
+  color: #d1d5db !important;
+}
+
+/* Exact 1024px layout stabilization */
+@media (width: 1024px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100% !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Navigation: force tablet to use mobile drawer pattern */
+  header .hidden.lg\:flex {
+    display: none !important;
+  }
+
+  header button.lg\:hidden {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header #mobile-menu {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    width: min(84vw, 360px) !important;
+    height: 100vh !important;
+    padding: 5.5rem 1.25rem 1.5rem !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-bottom: none !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 90 !important;
+    display: flex !important;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+  }
+
+  body.light-mode header #mobile-menu {
+    border-left-color: rgba(17, 24, 39, 0.12) !important;
+  }
+
+  header .nav-auth-btn,
+  header .nav-book-now-compact {
+    display: none !important;
+  }
+
+  header #mobile-menu.flex {
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  header #mobile-menu.hidden {
+    display: flex !important;
+    pointer-events: none;
+    transform: translateX(100%);
+  }
+
+  /* Hero/layout behavior at exact 1024px */
+  main {
+    overflow-x: hidden;
+  }
+
+  section[class*="lg:flex-row"],
+  section[class*="lg:flex-row-reverse"],
+  div[class*="lg:flex-row"],
+  div[class*="lg:flex-row-reverse"] {
+    flex-direction: column !important;
+  }
+
+  section[class*="lg:flex-row"] > div,
+  section[class*="lg:flex-row-reverse"] > div,
+  div[class*="lg:flex-row"] > div,
+  div[class*="lg:flex-row-reverse"] > div {
+    width: 100% !important;
+  }
+
+  section[class*="min-h-screen"] {
+    min-height: auto !important;
+  }
+
+  main[class*="lg:pt-0"] {
+    padding-top: 6rem !important;
+  }
+
+  section[class*="min-h-screen"] [class*="lg:w-1/2"] {
+    width: 100% !important;
+  }
+
+  section[class*="min-h-screen"] [class*="lg:p-24"] {
+    padding: 2.5rem 1.5rem !important;
+  }
+
+  section[class*="min-h-screen"] > div:last-child {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  section[class*="min-h-screen"] img,
+  section[class*="lg:flex-row"] img,
+  section[class*="lg:flex-row-reverse"] img,
+  div[class*="lg:flex-row"] img,
+  div[class*="lg:flex-row-reverse"] img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Grid consistency */
+  [class*="md:grid-cols-"],
+  [class*="lg:grid-cols-"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
 }
 
 /* Animations */

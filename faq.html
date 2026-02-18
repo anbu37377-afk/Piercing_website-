@@ -44,13 +44,32 @@
                     title="Toggle RTL/LTR">
                     <i class="fas fa-align-right"></i>
                 </button>
-                <a href="login.html"
-                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors">Login</a>
-                <a href="register.html"
-                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors">Sign Up</a>
-                <a href="booking.html" class="btn-primary">Book Now</a>
+                <a href="login.html" class="nav-auth-btn nav-auth-login hidden md:inline-flex items-center justify-center whitespace-nowrap">Login</a>
+                <a href="register.html" class="nav-auth-btn nav-auth-signup hidden md:inline-flex items-center justify-center whitespace-nowrap">Sign Up</a>
+                <a href="booking.html"
+                    class="btn-primary nav-book-now-compact hidden md:inline-flex items-center justify-center whitespace-nowrap shrink-0">Book
+                    Now</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-2xl" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-dark border-b border-white/10 flex-col p-6 space-y-4 animate-fadeIn">
+            <a href="index.html" class="text-lg font-semibold">Home</a>
+            <a href="index-v2.html" class="text-lg font-semibold">Home 2</a>
+            <a href="services.html" class="text-lg font-semibold">Services</a>
+            <a href="jewelry-catalog.html" class="text-lg font-semibold">Jewelry</a>
+            <a href="artists.html" class="text-lg font-semibold">Artists</a>
+            <a href="aftercare-guide.html" class="text-lg font-semibold">Aftercare</a>
+            <a href="gallery.html" class="text-lg font-semibold">Gallery</a>
+            <a href="dashboard.html" class="text-lg font-semibold">Dashboard</a>
+            <a href="login.html" class="text-lg font-semibold">Login</a>
+            <a href="register.html" class="text-lg font-semibold">Sign Up</a>
+            <a href="booking.html" class="btn-primary inline-block text-center">Book Appointment</a>
+        </div>
     </header>
 
     <main class="pt-32 pb-24">
@@ -253,3 +272,4 @@
 </body>
 
 </html>
+

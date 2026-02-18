@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
-<body class="dark-mode bg-dark text-white font-[Inter]">
+<body class="dark-mode bg-dark text-white font-[Inter] overflow-x-hidden">
 
     <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
@@ -44,20 +44,41 @@
                     class="text-sm font-semibold hover:text-primary transition-colors hover:scale-105 transition-transform">Dashboard</a>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="login.html"
-                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors">Login</a>
-                <a href="register.html"
-                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors">Sign Up</a>
-                <a href="booking.html" class="btn-primary">Book Now</a>
+                <a href="login.html" class="nav-auth-btn nav-auth-login hidden md:inline-flex items-center justify-center whitespace-nowrap">Login</a>
+                <a href="register.html" class="nav-auth-btn nav-auth-signup hidden md:inline-flex items-center justify-center whitespace-nowrap">Sign Up</a>
+                <a href="booking.html"
+                    class="btn-primary nav-book-now-compact hidden md:inline-flex items-center justify-center whitespace-nowrap shrink-0">Book
+                    Now</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-2xl" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-dark border-b border-white/10 flex-col p-6 space-y-4 animate-fadeIn">
+            <a href="index.html" class="text-lg font-semibold">Home</a>
+            <a href="index-v2.html" class="text-lg font-semibold">Home 2</a>
+            <a href="services.html" class="text-lg font-semibold">Services</a>
+            <a href="jewelry-catalog.html" class="text-lg font-semibold">Jewelry</a>
+            <a href="artists.html" class="text-lg font-semibold">Artists</a>
+            <a href="aftercare-guide.html" class="text-lg font-semibold">Aftercare</a>
+            <a href="gallery.html" class="text-lg font-semibold">Gallery</a>
+            <a href="dashboard.html" class="text-lg font-semibold">Dashboard</a>
+            <a href="login.html" class="text-lg font-semibold">Login</a>
+            <a href="register.html" class="text-lg font-semibold">Sign Up</a>
+            <a href="booking.html" class="btn-primary inline-block text-center" aria-current="page">Book Appointment</a>
+        </div>
     </header>
 
     <main class="pt-32 pb-24">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-24">
-                    <h1 class="text-6xl md:text-8xl font-display font-black mb-8 uppercase tracking-tighter">SECURE THE
+                    <h1
+                        class="text-4xl sm:text-5xl md:text-8xl font-display font-black mb-8 uppercase tracking-tighter break-words leading-tight">
+                        SECURE THE
                         <br><span class="text-primary italic">EXPERIENCE</span></h1>
                     <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
                         Precision starts here. Select your procedure and partner with an artist who shares your
@@ -301,10 +322,11 @@
     </main>
 
     <footer
-        class="bg-black border-t border-white/5 py-12 text-center text-gray-700 text-[10px] font-black uppercase tracking-[0.4em]">
+        class="bg-black border-t border-white/5 py-12 text-center text-gray-700 text-[10px] font-black uppercase tracking-[0.12em] sm:tracking-[0.4em] px-4">
         <p>&copy; 2026 Ethereal Ink Collective</p>
     </footer>
 
+    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         flatpickr("#datepicker", {
@@ -322,3 +344,4 @@
 </body>
 
 </html>
+

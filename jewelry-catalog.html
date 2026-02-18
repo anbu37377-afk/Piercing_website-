@@ -20,14 +20,14 @@
 <body class="dark-mode">
 
     <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10 text-white">
-        <nav class="container mx-auto px-6 py-4 flex items-center gap-8">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-2 shrink-0">
                 <i class="fas fa-needle text-primary text-2xl rotate-45"></i>
                 <span class="text-2xl font-display font-extrabold tracking-tighter text-white">ETHEREAL<span
                         class="text-primary">INK</span></span>
             </a>
 
-            <div class="hidden lg:flex flex-1 items-center justify-center gap-8 min-w-0">
+            <div class="hidden lg:flex items-center space-x-8">
                 <a href="index.html" class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Home</a>
                 <a href="index-v2.html" class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Home 2</a>
                 <a href="services.html" class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Services</a>
@@ -42,7 +42,7 @@
                     class="text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Dashboard</a>
             </div>
 
-            <div class="ml-auto flex items-center space-x-4 shrink-0">
+            <div class="flex items-center space-x-4">
                 <button id="rtl-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
                     title="Toggle RTL/LTR">
                     <i class="fas fa-align-right"></i>
@@ -52,12 +52,11 @@
                     <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
                     <i id="theme-icon-light" class="fas fa-sun"></i>
                 </button>
-                <a href="login.html"
-                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Login</a>
-                <a href="register.html"
-                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors whitespace-nowrap">Sign
-                    Up</a>
-                <a href="booking.html" class="btn-primary hidden md:inline-block whitespace-nowrap">Book Now</a>
+                <a href="login.html" class="nav-auth-btn nav-auth-login hidden md:inline-flex items-center justify-center whitespace-nowrap">Login</a>
+                <a href="register.html" class="nav-auth-btn nav-auth-signup hidden md:inline-flex items-center justify-center whitespace-nowrap">Sign Up</a>
+                <a href="booking.html"
+                    class="btn-primary nav-book-now-compact hidden md:inline-flex items-center justify-center whitespace-nowrap shrink-0">Book
+                    Now</a>
 
                 <button id="mobile-menu-btn" class="lg:hidden p-2 text-2xl">
                     <i class="fas fa-bars"></i>
@@ -88,7 +87,7 @@
             <div class="flex flex-col lg:flex-row gap-12 mb-24">
                 <!-- Filters Sidebar -->
                 <aside class="lg:w-1/4">
-                    <div class="sticky top-40 space-y-8">
+                    <div class="space-y-8 lg:sticky lg:top-40">
                         <div class="bg-white/5 rounded-3xl p-8 border border-white/10">
                             <div class="flex items-center justify-between mb-8">
                                 <h3 class="text-xl font-bold uppercase tracking-tight">Refine</h3>
@@ -288,7 +287,7 @@
                 </section>
 
                 <!-- Care & Buying Guide -->
-                <section class="p-12 border border-white/5 rounded-[40px] bg-dark">
+                <section class="p-12 border border-white/5 rounded-[40px] bg-dark text-white">
                     <div class="text-center mb-16">
                         <h2 class="text-3xl font-display font-black uppercase">INVESTMENT PROTECTION GUIDE</h2>
                     </div>
@@ -333,7 +332,7 @@
     <div id="quick-view" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-6 md:p-12">
         <div class="absolute inset-0 bg-black/90 backdrop-blur-md" id="modal-overlay"></div>
         <div
-            class="relative bg-dark border border-white/10 rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row">
+            class="relative bg-dark border border-white/10 rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col md:flex-row text-white">
             <button id="close-modal" class="absolute top-6 right-6 text-2xl z-20"><i class="fas fa-times"></i></button>
             <div class="md:w-1/2 h-96 md:h-auto bg-neutral-900">
                 <img id="modal-img" src="" class="w-full h-full object-cover">
@@ -377,3 +376,4 @@
 </body>
 
 </html>
+

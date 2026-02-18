@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="dark-mode">
+<body class="dark-mode aftercare-page">
 
     <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
@@ -48,11 +48,14 @@
                     <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
                     <i id="theme-icon-light" class="fas fa-sun"></i>
                 </button>
-                <a href="login.html"
-                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors">Login</a>
-                <a href="register.html"
-                    class="hidden md:inline-block text-sm font-semibold hover:text-primary transition-colors">Sign Up</a>
-                <a href="booking.html" class="btn-primary">Book Now</a>
+                <a href="login.html" class="nav-auth-btn nav-auth-login hidden md:inline-flex items-center justify-center whitespace-nowrap">Login</a>
+                <a href="register.html" class="nav-auth-btn nav-auth-signup hidden md:inline-flex items-center justify-center whitespace-nowrap">Sign Up</a>
+                <a href="booking.html"
+                    class="btn-primary nav-book-now-compact hidden md:inline-flex items-center justify-center whitespace-nowrap shrink-0">Book
+                    Now</a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-2xl" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </nav>
 
@@ -265,7 +268,7 @@
 
             <!-- Symptom Checker CTA -->
             <div
-                class="bg-gradient-to-br from-dark to-primary/10 rounded-[4rem] p-16 border border-white/5 flex flex-col lg:flex-row items-center justify-between shadow-2xl relative overflow-hidden">
+                class="assessment-cta bg-gradient-to-br from-dark to-primary/10 rounded-[4rem] p-16 border border-white/5 flex flex-col lg:flex-row items-center justify-between shadow-2xl relative overflow-hidden">
                 <div class="relative z-10 mb-12 lg:mb-0">
                     <h3 class="text-4xl md:text-5xl font-display font-black mb-6 uppercase tracking-tighter">CLINICAL
                         <span class="text-accent underline decoration-primary underline-offset-8">ASSESSMENT</span></h3>
@@ -298,3 +301,4 @@
 </body>
 
 </html>
+
