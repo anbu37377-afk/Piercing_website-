@@ -9,8 +9,26 @@ const jewelryData = [
 
 document.addEventListener('DOMContentLoaded', () => {
     initFilters();
+    initMobileFilters(); // New function
     renderGrid(jewelryData);
 });
+
+function initMobileFilters() {
+    const filterToggle = document.getElementById('mobile-filter-toggle');
+    const filterContainer = document.getElementById('filter-container');
+
+    if (filterToggle && filterContainer) {
+        filterToggle.addEventListener('click', () => {
+            const isHidden = filterContainer.classList.contains('hidden');
+            if (isHidden) {
+                filterContainer.classList.remove('hidden');
+                filterContainer.classList.add('animate-fadeIn');
+            } else {
+                filterContainer.classList.add('hidden');
+            }
+        });
+    }
+}
 
 function initFilters() {
     const searchInput = document.getElementById('jewelry-search');

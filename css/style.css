@@ -249,8 +249,197 @@ body.gallery-page.light-mode footer {
   color: #d1d5db !important;
 }
 
+/* Catalog page readability in light theme */
+body.catalog-page.light-mode {
+  background-color: #f9fafb !important;
+}
+
+body.catalog-page.light-mode main h2,
+body.catalog-page.light-mode main h3,
+body.catalog-page.light-mode main h4,
+body.catalog-page.light-mode main .text-white {
+  color: #111827 !important;
+}
+
+body.catalog-page.light-mode main .text-gray-400,
+body.catalog-page.light-mode main .text-gray-500 {
+  color: #4b5563 !important;
+}
+
+body.catalog-page.light-mode .bg-white\/5 {
+  background-color: #ffffff !important;
+  border-color: rgba(17, 24, 39, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.catalog-page.light-mode #jewelry-search {
+  background-color: #f3f4f6 !important;
+  color: #111827 !important;
+  border-color: rgba(17, 24, 39, 0.1) !important;
+}
+
+body.catalog-page.light-mode .filter-checkbox+span {
+  border-color: rgba(17, 24, 39, 0.2) !important;
+}
+
+body.catalog-page.light-mode .filter-checkbox:checked+span {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+body.catalog-page.light-mode .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, rgba(124, 58, 237, 0.05), rgba(236, 72, 153, 0.05)) !important;
+}
+
+body.catalog-page.light-mode #jewelry-grid .group {
+  background-color: #ffffff !important;
+  border-color: rgba(17, 24, 39, 0.05) !important;
+}
+
+body.catalog-page.light-mode #jewelry-grid .text-white {
+  color: #111827 !important;
+}
+
+body.catalog-page.light-mode #jewelry-grid .bg-black\/50 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  color: #111827 !important;
+  border-color: rgba(17, 24, 39, 0.1) !important;
+}
+
+body.catalog-page.light-mode footer {
+  background-color: #f3f4f6 !important;
+  border-top-color: rgba(17, 24, 39, 0.1) !important;
+  color: #6b7280 !important;
+}
+
+body.catalog-page.light-mode #mobile-filter-toggle {
+  background-color: #ffffff !important;
+  border-color: rgba(17, 24, 39, 0.1) !important;
+  color: #111827 !important;
+}
+
+/* Booking page readability in light theme */
+body.booking-page.light-mode {
+  background-color: #f9fafb !important;
+}
+
+body.booking-page.light-mode main h1,
+body.booking-page.light-mode main h2,
+body.booking-page.light-mode main h3,
+body.booking-page.light-mode main h4,
+body.booking-page.light-mode main h5,
+body.booking-page.light-mode main .text-white {
+  color: #111827 !important;
+}
+
+body.booking-page.light-mode main .text-gray-400,
+body.booking-page.light-mode main .text-gray-500,
+body.booking-page.light-mode main .text-gray-600 {
+  color: #4b5563 !important;
+}
+
+body.booking-page.light-mode .bg-zinc-900,
+body.booking-page.light-mode .bg-black,
+body.booking-page.light-mode aside .bg-zinc-900,
+body.booking-page.light-mode aside .bg-black {
+  background-color: #ffffff !important;
+  border-color: rgba(17, 24, 39, 0.1) !important;
+}
+
+body.booking-page.light-mode .bg-white\/5 {
+  background-color: rgba(17, 24, 39, 0.05) !important;
+}
+
+body.booking-page.light-mode select,
+body.booking-page.light-mode input {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  border-color: rgba(17, 24, 39, 0.2) !important;
+}
+
+body.booking-page.light-mode .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, rgba(124, 58, 237, 0.05), rgba(236, 72, 153, 0.05)) !important;
+}
+
+body.booking-page.light-mode footer {
+  background-color: #f3f4f6 !important;
+  border-top-color: rgba(17, 24, 39, 0.1) !important;
+  color: #6b7280 !important;
+}
+
+body.booking-page.light-mode .border-white\/5,
+body.booking-page.light-mode .border-white\/10 {
+  border-color: rgba(17, 24, 39, 0.1) !important;
+}
+
+/* Dashboard page readability in light theme */
+body.dashboard-page.light-mode {
+  background-color: #f3f4f6 !important;
+}
+
+body.dashboard-page.light-mode #sidebar {
+  background-color: #ffffff !important;
+  border-right-color: rgba(17, 24, 39, 0.08) !important;
+}
+
+body.dashboard-page.light-mode #sidebar .text-gray-400 {
+  color: #6b7280 !important;
+}
+
+body.dashboard-page.light-mode #sidebar a:hover:not(.bg-primary\/10) {
+  background-color: rgba(17, 24, 39, 0.04) !important;
+}
+
+body.dashboard-page.light-mode main h1,
+body.dashboard-page.light-mode main h2,
+body.dashboard-page.light-mode main h3,
+body.dashboard-page.light-mode main h4,
+body.dashboard-page.light-mode main .text-white {
+  color: #111827 !important;
+}
+
+body.dashboard-page.light-mode main .text-gray-300,
+body.dashboard-page.light-mode main .text-gray-400,
+body.dashboard-page.light-mode main .text-gray-500 {
+  color: #4b5563 !important;
+}
+
+body.dashboard-page.light-mode .bg-zinc-900,
+body.dashboard-page.light-mode .bg-black,
+body.dashboard-page.light-mode .bg-zinc-900\/30,
+body.dashboard-page.light-mode .bg-zinc-900\/50 {
+  background-color: #ffffff !important;
+  border-color: rgba(17, 24, 39, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+}
+
+body.dashboard-page.light-mode .bg-white\/2,
+body.dashboard-page.light-mode .bg-white\/5 {
+  background-color: rgba(17, 24, 39, 0.03) !important;
+}
+
+body.dashboard-page.light-mode .border-white\/5,
+body.dashboard-page.light-mode .border-white\/10 {
+  border-color: rgba(17, 24, 39, 0.08) !important;
+}
+
+body.dashboard-page.light-mode .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, rgba(124, 58, 237, 0.05), rgba(236, 72, 153, 0.05)) !important;
+}
+
+body.dashboard-page.light-mode footer {
+  background-color: #ffffff !important;
+  border-top-color: rgba(17, 24, 39, 0.08) !important;
+  color: #9ca3af !important;
+}
+
+body.dashboard-page.light-mode #toggle-sidebar-mobile {
+  color: #111827 !important;
+}
+
 /* Exact 1024px layout stabilization */
 @media (width: 1024px) {
+
   html,
   body {
     width: 100%;
@@ -332,10 +521,10 @@ body.gallery-page.light-mode footer {
     flex-direction: column !important;
   }
 
-  section[class*="lg:flex-row"] > div,
-  section[class*="lg:flex-row-reverse"] > div,
-  div[class*="lg:flex-row"] > div,
-  div[class*="lg:flex-row-reverse"] > div {
+  section[class*="lg:flex-row"]>div,
+  section[class*="lg:flex-row-reverse"]>div,
+  div[class*="lg:flex-row"]>div,
+  div[class*="lg:flex-row-reverse"]>div {
     width: 100% !important;
   }
 
@@ -355,7 +544,7 @@ body.gallery-page.light-mode footer {
     padding: 2.5rem 1.5rem !important;
   }
 
-  section[class*="min-h-screen"] > div:last-child {
+  section[class*="min-h-screen"]>div:last-child {
     text-align: center !important;
     align-items: center !important;
   }

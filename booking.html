@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
-<body class="dark-mode bg-dark text-white font-[Inter] overflow-x-hidden">
+<body class="booking-page dark-mode font-[Inter] overflow-x-hidden">
 
     <header class="fixed w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
@@ -44,8 +44,16 @@
                     class="text-sm font-semibold hover:text-primary transition-colors hover:scale-105 transition-transform">Dashboard</a>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="login.html" class="nav-auth-btn nav-auth-login hidden md:inline-flex items-center justify-center whitespace-nowrap">Login</a>
-                <a href="register.html" class="nav-auth-btn nav-auth-signup hidden md:inline-flex items-center justify-center whitespace-nowrap">Sign Up</a>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors"
+                    title="Toggle Theme">
+                    <i id="theme-icon-dark" class="fas fa-moon hidden"></i>
+                    <i id="theme-icon-light" class="fas fa-sun"></i>
+                </button>
+                <a href="login.html"
+                    class="nav-auth-btn nav-auth-login hidden md:inline-flex items-center justify-center whitespace-nowrap">Login</a>
+                <a href="register.html"
+                    class="nav-auth-btn nav-auth-signup hidden md:inline-flex items-center justify-center whitespace-nowrap">Sign
+                    Up</a>
                 <a href="booking.html"
                     class="btn-primary nav-book-now-compact hidden md:inline-flex items-center justify-center whitespace-nowrap shrink-0">Book
                     Now</a>
@@ -79,7 +87,8 @@
                     <h1
                         class="text-4xl sm:text-5xl md:text-8xl font-display font-black mb-8 uppercase tracking-tighter break-words leading-tight">
                         SECURE THE
-                        <br><span class="text-primary italic">EXPERIENCE</span></h1>
+                        <br><span class="text-primary italic">EXPERIENCE</span>
+                    </h1>
                     <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
                         Precision starts here. Select your procedure and partner with an artist who shares your
                         aesthetic vision. All appointments require a non-refundable session fee to guarantee clinical
@@ -344,4 +353,3 @@
 </body>
 
 </html>
-
