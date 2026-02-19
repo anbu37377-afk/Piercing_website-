@@ -437,6 +437,139 @@ body.dashboard-page.light-mode #toggle-sidebar-mobile {
   color: #111827 !important;
 }
 
+/* Home 1 (index.html) Light Mode Visibility & Design Refinements */
+body.light-mode section.bg-dark,
+body.light-mode section.bg-black,
+body.light-mode section.bg-neutral-900\/50 {
+  background-color: #f8fafc !important;
+  color: #111827 !important;
+}
+
+body.light-mode .bg-dark\/50,
+body.light-mode .bg-black\/40,
+body.light-mode .bg-black\/50,
+body.light-mode .bg-neutral-900\/30,
+body.light-mode .bg-neutral-900\/50 {
+  background-color: #ffffff !important;
+  border-color: rgba(17, 24, 39, 0.08) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .text-white,
+body.light-mode h1.text-white,
+body.light-mode h2.text-white,
+body.light-mode h3.text-white,
+body.light-mode h4.text-white,
+body.light-mode h5.text-white {
+  color: #111827 !important;
+}
+
+body.light-mode .text-gray-100,
+body.light-mode .text-gray-200,
+body.light-mode .text-gray-300,
+body.light-mode .text-gray-400 {
+  color: #4b5563 !important;
+}
+
+body.light-mode .border-white\/5,
+body.light-mode .border-white\/10,
+body.light-mode .border-white\/20,
+body.light-mode .border-white\/30 {
+  border-color: rgba(17, 24, 39, 0.1) !important;
+}
+
+body.light-mode .bg-white\/10 {
+  background-color: rgba(17, 24, 39, 0.05) !important;
+}
+
+body.light-mode .bg-primary\/10 {
+  background-color: rgba(124, 58, 237, 0.08) !important;
+}
+
+body.light-mode .bg-secondary\/10 {
+  background-color: rgba(236, 72, 153, 0.08) !important;
+}
+
+body.light-mode .bg-accent\/10 {
+  background-color: rgba(6, 182, 212, 0.08) !important;
+}
+
+body.light-mode .bg-yellow-500\/10 {
+  background-color: rgba(234, 179, 8, 0.08) !important;
+}
+
+/* Fix Icon Visibility in Standard & Service Cards (Light Mode) */
+body.light-mode .bg-primary\/10 i {
+  color: var(--primary) !important;
+}
+
+body.light-mode .bg-secondary\/10 i {
+  color: var(--secondary) !important;
+}
+
+body.light-mode .bg-accent\/10 i {
+  color: var(--accent) !important;
+}
+
+body.light-mode .bg-yellow-500\/10 i {
+  color: #a16207 !important;
+}
+
+/* In Core Services section (absolute icons) */
+body.light-mode section .opacity-10 i {
+  color: #111827 !important;
+  opacity: 0.2;
+}
+
+/* Ensure icons turn white on hover when the background becomes solid */
+body.light-mode .group:hover i {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Specific section refinements for Home 1 */
+body.light-mode section.py-12.bg-black {
+  background-color: #f1f5f9 !important;
+}
+
+body.light-mode section.py-12.bg-black .text-gray-200 {
+  color: #334155 !important;
+}
+
+body.light-mode section.py-32.relative.overflow-hidden {
+  background-color: #ffffff !important;
+}
+
+body.light-mode .bg-dark\/50.group:hover,
+body.light-mode .bg-black\/40.group:hover {
+  border-color: var(--primary) !important;
+}
+
+body.light-mode footer.bg-black {
+  background-color: #f8fafc !important;
+  border-top-color: rgba(17, 24, 39, 0.1) !important;
+}
+
+body.light-mode footer .text-gray-300 {
+  color: #64748b !important;
+}
+
+body.light-mode footer a:hover {
+  color: #111827 !important;
+}
+
+/* Home 2: Jewelry Cards Text Visibility in Light Mode */
+body.light-mode .from-black\/80 h4,
+body.light-mode .from-black\/80 span:not(.text-primary):not(.text-secondary):not(.text-accent),
+body.light-mode .from-black\/80 i:not(.text-primary) {
+  color: #ffffff !important;
+}
+
+body.light-mode .from-black\/80 span.text-primary,
+body.light-mode .from-black\/80 .text-primary {
+  color: var(--primary) !important;
+}
+
 /* Exact 1024px layout stabilization */
 @media (width: 1024px) {
 
