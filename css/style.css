@@ -570,6 +570,23 @@ body.light-mode .from-black\/80 .text-primary {
   color: var(--primary) !important;
 }
 
+/* Home v1 Hero Light Mode Refinement */
+body.light-mode section.min-h-screen.flex.items-center h1.text-white,
+body.light-mode section.min-h-screen.flex.items-center .text-gray-100,
+body.light-mode section.min-h-screen.flex.items-center .text-gray-300,
+body.light-mode section.min-h-screen.flex.items-center a.text-white,
+body.light-mode section.min-h-screen.flex.items-center i {
+  color: #ffffff !important;
+}
+
+body.light-mode section.min-h-screen.flex.items-center .border-white\/30 {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.light-mode section.min-h-screen.flex.items-center a.px-10:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
 /* Exact 1024px layout stabilization */
 @media (width: 1024px) {
 

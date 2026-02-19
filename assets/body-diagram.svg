@@ -1,29 +1,29 @@
 <svg id="body-diagram-svg" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
   <!-- Simplified Human Outline -->
-  <path d="M200,50 Q230,50 240,80 Q250,110 240,140 Q230,170 200,170 Q170,170 160,140 Q150,110 160,80 Q170,50 200,50" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-400"/>
-  <path d="M160,140 Q100,150 80,180 Q60,210 70,300 L90,500 Q100,550 150,550 L250,550 Q300,550 310,500 L330,300 Q340,210 320,180 Q300,150 240,140" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-400"/>
+  <path d="M200,50 Q230,50 240,80 Q250,110 240,140 Q230,170 200,170 Q170,170 160,140 Q150,110 160,80 Q170,50 200,50" fill="none" stroke="#9ca3af" stroke-width="2"/>
+  <path d="M160,140 Q100,150 80,180 Q60,210 70,300 L90,500 Q100,550 150,550 L250,550 Q300,550 310,500 L330,300 Q340,210 320,180 Q300,150 240,140" fill="none" stroke="#9ca3af" stroke-width="2"/>
   
   <!-- Interactive Points -->
   <!-- Ear -->
-  <circle cx="245" cy="110" r="10" fill="currentColor" class="piercing-point text-purple-500 cursor-pointer hover:text-pink-500 transition-colors" data-location="ear">
+  <circle cx="245" cy="110" r="10" fill="#a855f7" class="piercing-point cursor-pointer hover:text-pink-500 transition-colors" data-location="ear">
     <title>Ear Piercings</title>
   </circle>
-  <circle cx="155" cy="110" r="10" fill="currentColor" class="piercing-point text-purple-500 cursor-pointer hover:text-pink-500 transition-colors" data-location="ear">
+  <circle cx="155" cy="110" r="10" fill="#a855f7" class="piercing-point cursor-pointer hover:text-pink-500 transition-colors" data-location="ear">
     <title>Ear Piercings</title>
   </circle>
   
   <!-- Nose -->
-  <circle cx="200" cy="115" r="6" fill="currentColor" class="piercing-point text-cyan-500 cursor-pointer hover:text-pink-500 transition-colors" data-location="nose">
+  <circle cx="200" cy="115" r="6" fill="#06b6d4" class="piercing-point cursor-pointer hover:text-pink-500 transition-colors" data-location="nose">
     <title>Nose Piercings</title>
   </circle>
   
   <!-- Lip -->
-  <circle cx="200" cy="145" r="6" fill="currentColor" class="piercing-point text-purple-500 cursor-pointer hover:text-pink-500 transition-colors" data-location="lip">
+  <circle cx="200" cy="145" r="6" fill="#a855f7" class="piercing-point cursor-pointer hover:text-pink-500 transition-colors" data-location="lip">
     <title>Lip Piercings</title>
   </circle>
   
   <!-- Navel -->
-  <circle cx="200" cy="300" r="8" fill="currentColor" class="piercing-point text-cyan-500 cursor-pointer hover:text-pink-500 transition-colors" data-location="navel">
+  <circle cx="200" cy="300" r="8" fill="#06b6d4" class="piercing-point cursor-pointer hover:text-pink-500 transition-colors" data-location="navel">
     <title>Navel Piercing</title>
   </circle>
   
